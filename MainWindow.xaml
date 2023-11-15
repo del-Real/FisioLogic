@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FisioLogic"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Fisiologic" Background="#FF32E2D0" Width="1920" Height="1080" WindowStartupLocation="CenterScreen" MinWidth="1280" MinHeight="720">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="674*"/>
+            <ColumnDefinition Width="525*"/>
+            <ColumnDefinition Width="722*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="137*"/>
+            <RowDefinition Height="729*"/>
+            <RowDefinition Height="198*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="logo" Source="/FisioLogic_positive_OG.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="164" Width="266" MinHeight="164" MinWidth="266" Margin="140,79,0,0" Grid.Row="1" Grid.Column="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBox x:Name="tbUser" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="50" Background="#FF98F0E7" BorderBrush="#FF98F0E7" Foreground="#FF2D2D2D" Text="admin" FontFamily="Leelawadee" FontSize="22" Padding="10,10,0,0" Margin="98,330,0,0" Grid.Row="1" Grid.Column="1"/>
+        <PasswordBox x:Name="pbPass" HorizontalAlignment="Left" Margin="98,450,0,0" VerticalAlignment="Top" Width="350" Height="50" Background="#FF98F0E7" BorderBrush="#FF98F0E7" Foreground="#FF2D2D2D" Password="admin" FontFamily="Leelawadee" FontSize="22" Padding="10,10,0,0" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="lbPassRem" Content="He olvidado mi contraseña" HorizontalAlignment="Left" Margin="300,505,0,0" VerticalAlignment="Top" Height="26" Foreground="#FF2D2D2D" FontFamily="Leelawadee" Width="152" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="btnLogin" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="148,572,0,0" VerticalAlignment="Top" Height="62" Width="250" Background="#FF2D2D2D" Foreground="White" FontSize="24" FontFamily="Leelawadee UI" FontWeight="Bold" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="lbPassword" Content="Contraseña" HorizontalAlignment="Left" Margin="198,419,0,0" VerticalAlignment="Top" Height="26" Foreground="#FF2D2D2D" FontFamily="Leelawadee" Width="152" FontSize="16" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="lbUser" Content="Usuario" HorizontalAlignment="Left" Margin="198,298,0,0" VerticalAlignment="Top" Height="26" Foreground="#FF2D2D2D" FontFamily="Leelawadee" Width="152" FontSize="16" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Window>

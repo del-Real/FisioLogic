@@ -7,4 +7,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="FisioLogic_positive_OG.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="FisioLogic_positive_OG.png" />
+  </ItemGroup>
+
 </Project>
