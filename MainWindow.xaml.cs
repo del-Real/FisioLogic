@@ -13,16 +13,51 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FisioLogic
-{
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+namespace FisioLogic{
+
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
+        public MainWindow() {
             InitializeComponent();
+        }
+        //Evento: Al escribir en la contraseña, al levantar el click del teclado, se muestra la tecla que se ha pulsado 
+        private void passContrasena_KeyUp(object sender, KeyEventArgs e) {
+            lblEstado.Content = "Has pulsado la tecla <<" + e.Key.ToString() + ">>";
+        }
+        //Evento: Pulsar el boton de login
+        private string usuario = "admin";
+        private string contrasena = "admin";
+        private void btnLogin_click(object sender, RoutedEventArgs e) {
+            // Si no se ha introducido el login
+            if (String.IsNullOrEmpty(txtUsuario.Text) || String.IsNullOrEmpty(passContrasena.Password)) {
+                // feedback al usuario
+                lblEstado.Foreground = Brushes.Red;
+                lblEstado.Content = "Introduzca el usuario y la contraseña";
+            }
+            else {
+                if (txtUsuario.Text.Equals(usuario) && passContrasena.Password.Equals(contrasena)) {
+                    Application.Current.Shutdown();
+                }
+                else {
+                    // feedback al usuario
+                    lblEstado.Foreground = Brushes.Red;
+                    lblEstado.Content = "Combinación usuario-contraseña incorrecta";
+                }
+            }
+        }
+        //Evento: Verifica si el primer TextBox tiene algún texto. Si se escribe algo de texto, se habilita la contraseña
+        private void habilitarContrasena(object sender, TextChangedEventArgs e) {
+            
+            if (!string.IsNullOrEmpty(txtUsuario.Text)) {
+               passContrasena.IsEnabled = true; // Habilita el textbox de la contraseña
+            }
+            else {
+                passContrasena.IsEnabled = false; // Deshabilita el textbox si no hay texto en el usuario
+            }
+        }
+        //Evento: Si se pulsa el boton del ojo, se muestra la contraseña
+        private void MostrarContrasena_Click(object sender, RoutedEventArgs e) {
+            
         }
     }
 }

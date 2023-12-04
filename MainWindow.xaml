@@ -8,16 +8,24 @@
         Title="Fisiologic" Background="#FF32E2D0" Width="1920" Height="1080" WindowStartupLocation="CenterScreen" MinWidth="1280" MinHeight="720">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="674*"/>
-            <ColumnDefinition Width="525*"/>
-            <ColumnDefinition Width="722*"/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="144*"/>
+            <ColumnDefinition Width="144*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="160*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="137*"/>
-            <RowDefinition Height="729*"/>
-            <RowDefinition Height="198*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="40*"/>
         </Grid.RowDefinitions>
-        <Image x:Name="logo" Source="/FisioLogic_positive_OG.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="164" Width="266" MinHeight="164" MinWidth="266" Margin="140,79,0,0" Grid.Row="1" Grid.Column="1">
+        <Image x:Name="logo" Source="/FisioLogic_positive_OG.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="164" Width="266" MinHeight="164" MinWidth="266" Margin="241,14,0,0" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -27,11 +35,46 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBox x:Name="tbUser" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="50" Background="#FF98F0E7" BorderBrush="#FF98F0E7" Foreground="#FF2D2D2D" Text="admin" FontFamily="Leelawadee" FontSize="22" Padding="10,10,0,0" Margin="98,330,0,0" Grid.Row="1" Grid.Column="1"/>
-        <PasswordBox x:Name="pbPass" HorizontalAlignment="Left" Margin="98,450,0,0" VerticalAlignment="Top" Width="350" Height="50" Background="#FF98F0E7" BorderBrush="#FF98F0E7" Foreground="#FF2D2D2D" Password="admin" FontFamily="Leelawadee" FontSize="22" Padding="10,10,0,0" Grid.Row="1" Grid.Column="1"/>
-        <Label x:Name="lbPassRem" Content="He olvidado mi contraseña" HorizontalAlignment="Left" Margin="300,505,0,0" VerticalAlignment="Top" Height="26" Foreground="#FF2D2D2D" FontFamily="Leelawadee" Width="152" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="btnLogin" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="148,572,0,0" VerticalAlignment="Top" Height="62" Width="250" Background="#FF2D2D2D" Foreground="White" FontSize="24" FontFamily="Leelawadee UI" FontWeight="Bold" Grid.Row="1" Grid.Column="1"/>
-        <Label x:Name="lbPassword" Content="Contraseña" HorizontalAlignment="Left" Margin="198,419,0,0" VerticalAlignment="Top" Height="26" Foreground="#FF2D2D2D" FontFamily="Leelawadee" Width="152" FontSize="16" Grid.Row="1" Grid.Column="1"/>
-        <Label x:Name="lbUser" Content="Usuario" HorizontalAlignment="Left" Margin="198,298,0,0" VerticalAlignment="Top" Height="26" Foreground="#FF2D2D2D" FontFamily="Leelawadee" Width="152" FontSize="16" Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="txtUsuario" 
+                 Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" Width="500" Height="100" Margin="9"
+                 BorderThickness="5"  
+                 FontFamily="Leelawadee" FontSize="20"
+                 TextAlignment="Left"
+                 TextChanged="habilitarContrasena"/>
+        <PasswordBox x:Name="passContrasena"
+                 Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Width="500" Height="100" Margin="9"
+                 BorderThickness="5" 
+                 PasswordChar="●"
+                 FontFamily="Leelawadee" FontSize="20"
+                 VerticalContentAlignment="Center" IsEnabled="False" KeyUp="passContrasena_KeyUp" />
+        <Label x:Name="lbPassRem" Content="He olvidado mi contraseña"
+               Grid.Row="6" Grid.Column="3" Height="30" Width="178" Margin="0,0,38,0"
+               FontFamily="Leelawadee" FontSize="14"
+               HorizontalAlignment="Right"  VerticalAlignment="Top" HorizontalContentAlignment="Center"
+               Foreground="#FF2D2D2D"/>
+        <Label x:Name="lbPassword" Content="Contraseña" 
+               Grid.Row="4" Grid.Column="2" Grid.RowSpan="2" Height="40" Width="152" Margin="124,60,0,0"
+               FontFamily="Leelawadee" FontSize="20"
+               HorizontalAlignment="Left"  VerticalAlignment="Top"   
+               Foreground="#FF2D2D2D" RenderTransformOrigin="0.479,-0.39" />
+        <Label x:Name="lbUser" Content="Usuario"
+               Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Height="40" Width="152" Margin="124,60,0,0"
+               FontFamily="Leelawadee" FontSize="20"
+               HorizontalAlignment="Left"  VerticalAlignment="Top"   
+               Foreground="#FF2D2D2D" />
+        <Label x:Name="lblEstado" Content="Estado de la aplicacion" 
+               Grid.Row="6" Grid.ColumnSpan="6" Grid.RowSpan="2" Margin="0,181,-158,0"
+               FontFamily="Leelawadee" FontSize="16" FontWeight="Bold"
+               VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+               Background="White" Opacity="0.6" />
+        <Button x:Name="btnLogin" Content="Iniciar sesión" 
+                Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Height="62" Width="250" Margin="249,40,0,0"
+                FontFamily="Leelawadee UI" FontSize="24"  FontWeight="Bold"
+                HorizontalAlignment="Left"  VerticalAlignment="Top" 
+                Background="#FF2D2D2D" Foreground="White" Click="btnLogin_click"  />
+        <Button Width="50" Height="50" Grid.Row="5" Grid.Column="4" Click="MostrarContrasena_Click">
+            <Image x:Name="mostrarContrasena" Source="/FisioLogic_MostrarContrasena.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"
+                   Height="50" Width="50" MinHeight="50" MinWidth="50" GotMouseCapture="MostrarContrasena_Click"/>
+        </Button>
     </Grid>
 </Window>
