@@ -1,0 +1,22 @@
+﻿<Window x:Class="FisioLogic.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FisioLogic"
+        mc:Ignorable="d"
+        Title="Fisiologic" Background="#FFF" Width="1920" Height="1080" WindowStartupLocation="CenterScreen" MinWidth="1280" MinHeight="720">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="#FF32E2D0">
+            <Button x:Name="btn1" Content="Citas" Click="btn1_Click"/>
+            <Button x:Name="btn2" Content="Pacientes" Click="btn2_Click"/>
+            <Button x:Name="btn3" Content="Personal" Click="btn3_Click"/>
+            <Button x:Name="btn4" Content="Historiales" Click="btn4_Click"/>
+        </StackPanel>
+        <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" Height="1064" VerticalAlignment="Center" Navigated="mainFrame_Navigated_1" Grid.Column="1"/>
+    </Grid>
+</Window>
