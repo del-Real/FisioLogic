@@ -9,10 +9,12 @@
 
   <ItemGroup>
     <None Remove="FisioLogic_positive_OG.png" />
+    <None Remove="FisioLogic_User.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="FisioLogic_positive_OG.png" />
+    <Resource Include="FisioLogic_User.png" />
   </ItemGroup>
 
   <ItemGroup>

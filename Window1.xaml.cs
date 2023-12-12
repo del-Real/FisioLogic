@@ -29,25 +29,21 @@ namespace FisioLogic
 
         }
 
-        private void btn1_Click(object sender, RoutedEventArgs e)
+        private void enter_Mouse(object sender, MouseEventArgs e)
         {
-            mainFrame.Navigate(new Uri("pages/Citas.xaml", UriKind.Relative));
-
+            imgAvatar.Width = 250;
+            imgAvatar.Height = 250;
         }
 
-        private void btn2_Click(object sender, RoutedEventArgs e)
+        private void leave_Mouse(object sender, MouseEventArgs e)
         {
-            mainFrame.Navigate(new Uri("pages/Pacientes.xaml", UriKind.Relative));
+            imgAvatar.Width = 150;
+            imgAvatar.Height = 150;
         }
 
-        private void btn3_Click(object sender, RoutedEventArgs e)
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            mainFrame.Navigate(new Uri("pages/Personal.xaml", UriKind.Relative));
-        }
 
-        private void btn4_Click(object sender, RoutedEventArgs e)
-        {
-            mainFrame.Navigate(new Uri("pages/Historiales.xaml", UriKind.Relative));
         }
     }
 }
