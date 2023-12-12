@@ -11,6 +11,24 @@
     <Grid>
         <Border BorderBrush="#fff" Background="#fff" BorderThickness="5" CornerRadius="10"/>
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800"/>
-        <Label Content="Enero 2024" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="35" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="10,5,0,0" ScrollViewer.CanContentScroll="True"/>
+        <Label Content="Enero 2024" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="35" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
+        <Grid>
+            <Border BorderBrush="#c7c9ca" BorderThickness="10" CornerRadius="8" Margin="43,90,1122,745"/>
+            <Label Content="L" HorizontalAlignment="Left" Margin="52,94,0,0" VerticalAlignment="Top" Background="#c7c9ca" Foreground="#2d2d2d" Height="22" Width="69" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" HorizontalContentAlignment="Center"/>
+            <Border BorderBrush="#c7c9ca" BorderThickness="10" CornerRadius="8" Margin="139,90,1026,745"/>
+            <Label Content="M" HorizontalAlignment="Left" Margin="148,94,0,0" VerticalAlignment="Top" Background="#c7c9ca" Foreground="#2d2d2d" Height="22" Width="69" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" HorizontalContentAlignment="Center"/>
+            <Border BorderBrush="#c7c9ca" BorderThickness="10" CornerRadius="8" Margin="235,90,930,745"/>
+            <Label Content="X" HorizontalAlignment="Left" Margin="244,94,0,0" VerticalAlignment="Top" Background="#c7c9ca" Foreground="#2d2d2d" Height="22" Width="69" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" HorizontalContentAlignment="Center"/>
+            <Border BorderBrush="#c7c9ca" BorderThickness="10" CornerRadius="8" Margin="331,90,834,745"/>
+            <Label Content="J" HorizontalAlignment="Left" Margin="340,94,0,0" VerticalAlignment="Top" Background="#c7c9ca" Foreground="#2d2d2d" Height="22" Width="69" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" HorizontalContentAlignment="Center"/>
+            <Border BorderBrush="#c7c9ca" BorderThickness="10" CornerRadius="8" Margin="427,90,738,745"/>
+            <Label Content="V" HorizontalAlignment="Left" Margin="436,94,0,0" VerticalAlignment="Top" Background="#c7c9ca" Foreground="#2d2d2d" Height="22" Width="69" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" HorizontalContentAlignment="Center"/>
+            <Border BorderBrush="#c7c9ca" BorderThickness="10" CornerRadius="8" Margin="523,90,642,745"/>
+            <Label Content="S" HorizontalAlignment="Left" Margin="532,94,0,0" VerticalAlignment="Top" Background="#c7c9ca" Foreground="#2d2d2d" Height="22" Width="69" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" HorizontalContentAlignment="Center"/>
+            <Border BorderBrush="#c7c9ca" BorderThickness="10" CornerRadius="8" Margin="617,90,548,745"/>
+            <Label Content="D" HorizontalAlignment="Left" Margin="625,94,0,0" VerticalAlignment="Top" Background="#c7c9ca" Foreground="#2d2d2d" Height="22" Width="68" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" HorizontalContentAlignment="Center"/>
+
+        </Grid>
+
     </Grid>
 </Page>
