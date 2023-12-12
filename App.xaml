@@ -1,8 +1,8 @@
-﻿<Application x:Class="FisioLogic.App"
+﻿<Application x:Class="FisioLogicV2.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:FisioLogic"
-             StartupUri="Window1.xaml">
+             xmlns:local="clr-namespace:FisioLogicV2"
+             StartupUri="Windows/LoginScreen.xaml">
     <Application.Resources>
          
     </Application.Resources>

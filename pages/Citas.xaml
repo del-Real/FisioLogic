@@ -5,10 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FisioLogic.pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Citas" Background="IndianRed">
+      d:DesignHeight="865" d:DesignWidth="1250"
+      Title="Citas" Background="#32e2d0">
 
     <Grid>
-        
+        <Border BorderBrush="#fff" Background="#fff" BorderThickness="5" CornerRadius="10"/>
+        <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800"/>
+        <Label Content="Enero 2024" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="35" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="10,5,0,0" ScrollViewer.CanContentScroll="True"/>
     </Grid>
 </Page>
