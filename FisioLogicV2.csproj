@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Assets\FisioLogic_positive_OG.png" />
   </ItemGroup>
 

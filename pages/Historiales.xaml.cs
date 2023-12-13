@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FisioLogic.pages
+namespace FisioLogicV2.Pages
 {
     /// <summary>
     /// Interaction logic for Historiales.xaml
