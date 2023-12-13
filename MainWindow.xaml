@@ -17,8 +17,11 @@
             <Button x:Name="btn3" Content="Personal" Click="btn3_Click" Background="#FFF" Height="65" FontSize="22" FontFamily="Leelawadee" FontWeight="Bold"  Foreground="#545656" Margin="10" BorderThickness="0,0,0,0"/>
             <Button x:Name="btn4" Content="Historiales" Click="btn4_Click" Background="#FFF" Height="65" FontSize="22" FontFamily="Leelawadee" FontWeight="Bold"  Foreground="#545656" Margin="10" BorderThickness="0,0,0,0"/>
         </StackPanel>
+        <Image Source="/Assets/FisioLogic_positive_OG.png" Margin="21,43,1276,741" Grid.ColumnSpan="2"/>
         <Frame  x:Name="mainFrame" Source="Pages/Citas.xaml" Background="#fff" NavigationUIVisibility="Hidden" Height="865" Width="1250" VerticalAlignment="Top" Grid.Column="1" Margin="0,10,10,0" Grid.RowSpan="4" />
-        <Image Source="/Assets/FisioLogic_positive_OG.png" Margin="26,46,4,743"/>
-
+        <Border BorderThickness="1" CornerRadius="10" Margin="26,749,16,50" Background="#fff" Opacity="0.5"/>
+        <Image Margin="28,767,139,70" Source="/Assets/profile-user.png" Opacity="0.5"/>
+        <Label Content="Admin" HorizontalAlignment="Left" Margin="103,764,0,0" VerticalAlignment="Top" Width="107" FontSize="16" FontWeight="Bold" FontFamily="Leelawadee UI"/>
+        <Button Content="Cerrar Sesión" Background="Transparent" Foreground="#fff" HorizontalAlignment="Left" Margin="104,793,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" FontFamily="Leelawadee" FontSize="15" FontWeight="Bold" BorderThickness="0,0,0,0"/>
     </Grid>
 </Window>

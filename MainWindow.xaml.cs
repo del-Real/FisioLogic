@@ -40,5 +40,10 @@ namespace FisioLogicV2
         {
             mainFrame.Navigate(new Uri("Pages/Historiales.xaml", UriKind.Relative));
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
