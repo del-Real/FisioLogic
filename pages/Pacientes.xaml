@@ -9,9 +9,14 @@
       Title="Pacientes" Background="#32e2d0">
 
     <Grid>
-        <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10"/>
+
+        <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10" RenderTransformOrigin="0.498,0.523">
+        </Border>
+        <DataGrid x:Name="tablaPacientes" 
+                  Margin="5"
+                  AutoGenerateColumns="False"
+        </DataGrid>
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800"/>
         <Label Content="Pacientes" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="35" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
-
     </Grid>
 </Page>

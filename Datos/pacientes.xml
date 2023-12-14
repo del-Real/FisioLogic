@@ -1,0 +1,12 @@
+<Pacientes>
+	<Paciente IdPaciente="0" Nombre="Pedro" Apellidos="García López" Direccion="Calle 123, Ciudad A" Telefono="123456789" Edad="40" Genero="Masculino" Foto="imagen1.jpg" Email="pedro@example.com"/>
+	<Paciente IdPaciente="1" Nombre="Ana" Apellidos="Martínez Pérez" Direccion="Avenida XYZ, Ciudad B" Telefono="987654321" Edad="32" Genero="Femenino" Foto="imagen2.jpg" Email="ana@example.com"/>
+	<Paciente IdPaciente="2" Nombre="Carlos" Apellidos="Sánchez Rodríguez" Direccion="Calle 456, Ciudad C" Telefono="111222333" Edad="50" Genero="Masculino" Foto="imagen3.jpg" Email="carlos@example.com"/>
+	<Paciente IdPaciente="3" Nombre="Laura" Apellidos="Fernández Gómez" Direccion="Calle 789, Ciudad D" Telefono="444555666" Edad="25" Genero="Femenino" Foto="imagen4.jpg" Email="laura@example.com"/>
+	<Paciente IdPaciente="4" Nombre="Daniel" Apellidos="López Martínez" Direccion="Avenida 567, Ciudad E" Telefono="777888999" Edad="48" Genero="Masculino" Foto="imagen5.jpg" Email="daniel@example.com"/>
+	<Paciente IdPaciente="5" Nombre="María" Apellidos="Gómez Sánchez" Direccion="Calle 999, Ciudad F" Telefono="555444333" Edad="30" Genero="Femenino" Foto="imagen6.jpg" Email="maria@example.com"/>
+	<Paciente IdPaciente="6" Nombre="Javier" Apellidos="Fernández López" Direccion="Avenida 123, Ciudad G" Telefono="222333444" Edad="55" Genero="Masculino" Foto="imagen7.jpg" Email="javier@example.com"/>
+	<Paciente IdPaciente="7" Nombre="Sofía" Apellidos="Rodríguez Pérez" Direccion="Calle 456, Ciudad H" Telefono="999888777" Edad="22" Genero="Femenino" Foto="imagen8.jpg" Email="sofia@example.com"/>
+	<Paciente IdPaciente="8" Nombre="Alejandro" Apellidos="Hernández García" Direccion="Avenida XYZ, Ciudad I" Telefono="666777888" Edad="42" Genero="Masculino" Foto="imagen9.jpg" Email="alejandro@example.com"/>
+	<Paciente IdPaciente="9" Nombre="Elena" Apellidos="Martín Rodríguez" Direccion="Calle 789, Ciudad J" Telefono="333222111" Edad="35" Genero="Femenino" Foto="imagen10.jpg" Email="elena@example.com"/>
+</Pacientes>
