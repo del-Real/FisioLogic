@@ -44,7 +44,12 @@ namespace FisioLogicV2.Windows
             {
                 if (txtUsuario.Text.Equals(usuario) && passContrasena.Password.Equals(contrasena))
                 {
-                    Application.Current.Shutdown();
+                    // si el usuario introduce usuario y contraseña correctos se lanza ventana principal
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+
+                    // cierre ventana login
+                    Application.Current.MainWindow.Close();
                 }
                 else
                 {
