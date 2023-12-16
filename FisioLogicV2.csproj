@@ -12,14 +12,23 @@
     <None Remove="Assets\FisioLogic_positive_OG.png" />
     <None Remove="Assets\m_user.png" />
     <None Remove="Assets\profile-user.png" />
+    <None Remove="Assets\show-password.png" />
     <None Remove="Assets\w_user.png" />
+    <None Remove="Datos\pacientes.xml" />
+    <None Remove="Windows\show-password.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Datos\pacientes.xml" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Assets\FisioLogic_positive_OG.png" />
     <Resource Include="Assets\m_user.png" />
     <Resource Include="Assets\profile-user.png" />
+    <Resource Include="Assets\show-password.png" />
     <Resource Include="Assets\w_user.png" />
+    <Resource Include="Windows\show-password.png" />
   </ItemGroup>
 
 </Project>

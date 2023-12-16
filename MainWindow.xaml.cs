@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using FisioLogicV2.Windows;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,11 +17,12 @@ namespace FisioLogicV2
     /// </summary>
     public partial class MainWindow : Window
     {
+       
         public MainWindow()
         {
             InitializeComponent();
         }
-
+   
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new Uri("Pages/Citas.xaml", UriKind.Relative));
@@ -41,8 +43,15 @@ namespace FisioLogicV2
             mainFrame.Navigate(new Uri("Pages/Historiales.xaml", UriKind.Relative));
         }
 
+        // Cierre sesión
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+            LoginScreen loginScreen = new LoginScreen();
+            loginScreen.Show();
+
+            // cierre mainWindow
+            this.Close();
 
         }
     }

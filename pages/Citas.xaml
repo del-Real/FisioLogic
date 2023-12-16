@@ -10,10 +10,9 @@
 
     <Grid>
         <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10"/>
-        <Calendar Margin="1023,670,16,10"/>
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800"/>
-        <Label Content="Enero 2024" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="35" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
-        <Grid>
+        <Label Content="Citas" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="35" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
+        <Grid Visibility="Hidden">
             <Border BorderBrush="#c7c9ca" BorderThickness="10" CornerRadius="8" Margin="21,90,1106,745"/>
             <Label Content="L" HorizontalAlignment="Left" Margin="28,94,0,0" VerticalAlignment="Top" Background="#c7c9ca" Foreground="#2d2d2d" Height="22" Width="108" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" HorizontalContentAlignment="Center"/>
             <Border BorderBrush="#c7c9ca" BorderThickness="10" CornerRadius="8" Margin="149,90,977,745"/>
@@ -30,7 +29,7 @@
             <Label Content="D" HorizontalAlignment="Left" Margin="811,94,0,0" VerticalAlignment="Top" Background="#c7c9ca" Foreground="#2d2d2d" Height="22" Width="106" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" HorizontalContentAlignment="Center"/>
 
         </Grid>
-        <Grid>
+        <Grid Visibility="Hidden">
             <Button Content="1" Margin="20,148,1105,592" Width="125" Height="125" Background="#32e2d0" BorderThickness="0,0,0,0"/>
             <Button Content="2" Margin="150,148,975,592" Width="125" Height="125" Background="#32e2d0" BorderThickness="0,0,0,0"/>
             <Button Content="3" Margin="280,148,845,592" Width="125" Height="125" Background="#32e2d0" BorderThickness="0,0,0,0"/>
@@ -63,5 +62,8 @@
             <Button Content="30" Margin="150,667,975,73" Width="125" Height="125" Background="#32e2d0" BorderThickness="0,0,0,0"/>
             <Button Content="31" Margin="280,667,845,73" Width="125" Height="125" Background="#32e2d0" BorderThickness="0,0,0,0"/>
         </Grid>
+        <Viewbox Margin="25,102,525,101">
+            <Calendar Height="168" Width="191" BorderBrush="#32e2d0" />
+        </Viewbox>
     </Grid>
 </Page>

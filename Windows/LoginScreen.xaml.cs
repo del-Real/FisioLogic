@@ -14,26 +14,84 @@ using System.Windows.Shapes;
 
 namespace FisioLogicV2.Windows
 {
-    /// <summary>
-    /// Interaction logic for LoginScreen.xaml
-    /// </summary>
     public partial class LoginScreen : Window
     {
         public LoginScreen()
         {
             InitializeComponent();
         }
-        //Evento: Al escribir en la contraseña, al levantar el click del teclado, se muestra la tecla que se ha pulsado 
-        private void passContrasena_KeyUp(object sender, KeyEventArgs e)
+        //Evento: si nos encontramos en el cuadro de usuario y pulsamos Enter hará comprobación de login
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
         {
-            lblEstado.Content = "Has pulsado la tecla <<" + e.Key.ToString() + ">>";
+            if (e.Key == Key.Return)
+            {
+                // si no se ha introducido el login
+                if (String.IsNullOrEmpty(txtUsuario.Text) || String.IsNullOrEmpty(passContrasena.Password))
+                {
+                    // feedback al usuario
+                    lblEstado.Foreground = Brushes.Red;
+                    lblEstado.Content = "Introduzca el usuario y la contraseña";
+                }
+                else
+                {
+                    if (txtUsuario.Text.Equals(usuario) && passContrasena.Password.Equals(contrasena))
+                    {
+                        // si el usuario introduce usuario y contraseña correctos se lanza ventana principal
+                        MainWindow mainWindow = new MainWindow();
+                        mainWindow.Show();
+
+                        // cierre ventana login
+                        Application.Current.MainWindow.Close();
+                    }
+                    else
+                    {
+                        // feedback al usuario
+                        lblEstado.Foreground = Brushes.Red;
+                        lblEstado.Content = "Combinación usuario-contraseña incorrecta";
+                    }
+                }
+            }
         }
+
+        //Evento: si nos encontramos en el cuadro de contraseña y pulsamos Enter hará comprobación de login
+        private void passContrasena_KeyDown(object sender, KeyEventArgs e)
+        {
+           if (e.Key == Key.Return)
+            {
+                // si no se ha introducido el login
+                if (String.IsNullOrEmpty(txtUsuario.Text) || String.IsNullOrEmpty(passContrasena.Password))
+                {
+                    // feedback al usuario
+                    lblEstado.Foreground = Brushes.Red;
+                    lblEstado.Content = "Introduzca el usuario y la contraseña";
+                }
+                else
+                {
+                    if (txtUsuario.Text.Equals(usuario) && passContrasena.Password.Equals(contrasena))
+                    {
+                        // si el usuario introduce usuario y contraseña correctos se lanza ventana principal
+                        MainWindow mainWindow = new MainWindow();
+                        mainWindow.Show();
+
+                        // cierre ventana login
+                        Application.Current.MainWindow.Close();
+                    }
+                    else
+                    {
+                        // feedback al usuario
+                        lblEstado.Foreground = Brushes.Red;
+                        lblEstado.Content = "Combinación usuario-contraseña incorrecta";
+                    }
+                }
+            }
+        }
+
         //Evento: Pulsar el boton de login
         private string usuario = "admin";
         private string contrasena = "admin";
         private void btnLogin_click(object sender, RoutedEventArgs e)
         {
-            // Si no se ha introducido el login
+            // si no se ha introducido el login
             if (String.IsNullOrEmpty(txtUsuario.Text) || String.IsNullOrEmpty(passContrasena.Password))
             {
                 // feedback al usuario
@@ -59,6 +117,7 @@ namespace FisioLogicV2.Windows
                 }
             }
         }
+
         //Evento: Verifica si el primer TextBox tiene algún texto. Si se escribe algo de texto, se habilita la contraseña
         private void habilitarContrasena(object sender, TextChangedEventArgs e)
         {
@@ -75,7 +134,8 @@ namespace FisioLogicV2.Windows
         //Evento: Si se pulsa el boton del ojo, se muestra la contraseña
         private void MostrarContrasena_Click(object sender, RoutedEventArgs e)
         {
-
+            // Toggle visibility of PasswordBox and TextBox
+            lbShowPass.Content = passContrasena.Password;
         }
     }
 }
