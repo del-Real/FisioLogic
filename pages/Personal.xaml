@@ -16,6 +16,7 @@
         <Border BorderBrush="#32e2d0" BorderThickness="10" CornerRadius="0, 0, 8, 8" Margin="103,310,967,487"/>
         <Label Content="Lucía Ramirez" HorizontalAlignment="Left" Margin="107,316,0,0" VerticalAlignment="Top" Background="#32e2d0" Foreground="#2d2d2d" Height="30" Width="171" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label Content="Ver ficha" HorizontalAlignment="Left" Margin="107,342,0,0" VerticalAlignment="Top" Background="#32e2d0" Foreground="#fff" Height="30" Width="171" FontSize="15" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btnVerFicha" Content="Ver Ficha" Background="#32e2d0" Foreground="#fff" Margin="107,344,972,493" Click="Button_Click" BorderThickness="0,0,0,0" FontSize="14" FontWeight="Bold"/>
         <Image Source="/Assets/m_user.png" Stretch="Fill" Margin="360,106,690,555"/>
         <Border BorderBrush="#32e2d0" BorderThickness="10" CornerRadius="0, 0, 8, 8" Margin="370,310,700,487"/>
         <Label Content="Pedro Anasagasti" HorizontalAlignment="Left" Margin="374,316,0,0" VerticalAlignment="Top" Background="#32e2d0" Foreground="#2d2d2d" Height="30" Width="171" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
@@ -46,6 +47,8 @@
         <Border BorderBrush="#32e2d0" BorderThickness="10" CornerRadius="0, 0, 8, 8" Margin="916,730,154,67"/>
         <Label Content="Olivia Rodrigo" HorizontalAlignment="Left" Margin="920,736,0,0" VerticalAlignment="Top" Background="#32e2d0" Foreground="#2d2d2d" Height="30" Width="171" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label Content="Ver ficha" HorizontalAlignment="Left" Margin="920,762,0,0" VerticalAlignment="Top" Background="#32e2d0" Foreground="#fff" Height="30" Width="171" FontSize="15" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Frame x:Name="subFrame"  Margin="0,0,-5,0" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Height="865" Width="1250"/>
+
 
     </Grid>
 </Page>

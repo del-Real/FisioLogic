@@ -1,6 +1,4 @@
-﻿using FisioLogicV2.pages;
-using FisioLogicV2.Windows;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,24 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FisioLogicV2.Pages
+namespace FisioLogicV2.pages
 {
     /// <summary>
-    /// Interaction logic for Personal.xaml
+    /// Interaction logic for FichaPersonal.xaml
     /// </summary>
-    /// 
-    public partial class Personal : Page
+    public partial class FichaPersonal : Page
     {
-
-        public Personal()
+        public FichaPersonal()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            subFrame.Visibility = Visibility.Visible;
-            subFrame.Navigate(new Uri("Pages/FichaPersonal.xaml", UriKind.Relative));
+            this.Visibility = Visibility.Hidden;
+
         }
     }
 }
