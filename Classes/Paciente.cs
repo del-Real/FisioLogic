@@ -31,6 +31,23 @@ namespace FisioLogicV2.Classes
             Email = email;
         }
 
+        public Paciente(int id, string nombre, string apellidos, string direccion, int telefono, int edad, string genero, string email)
+        {
+            IdPaciente = id;
+            Nombre = nombre;
+            Apellidos = apellidos;
+            Direccion = direccion;
+            Telefono = telefono;
+            Edad = edad;
+            Genero = genero;
+            Email = email;
+        }
+        public Paciente() 
+        { 
+        
+        }
+        
+
     }
 }
 
