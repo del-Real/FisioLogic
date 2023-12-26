@@ -11,33 +11,34 @@
     <Grid>
 
         <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10" RenderTransformOrigin="0.498,0.523">
-            <DataGrid x:Name="dgPacientes" Margin="70,75,70,50" 
+            <DataGrid x:Name="dgPacientes" Margin="80,75,80,50" 
                       AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding IdPaciente}" Width="40" />
-                    <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}" Width="190" />
+                    <DataGridTextColumn Header="ID" Binding="{Binding IdPaciente}" Width="30" />
+                    <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}" Width="180" />
                     <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="100"/>
-                    <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}" Width="190"/>
+                    <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}" Width="180"/>
                     <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="100"/>
-                    <DataGridTextColumn Header="Edad" Binding="{Binding Edad}" Width="45"/>
-                    <DataGridTextColumn Header="Genero" Binding="{Binding Genero}" Width="100"/>
-                    <DataGridTemplateColumn Header="Fotografía" Width="75">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Image Width="75" Height="75" Source="{Binding Foto}"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="190" />
+                    <!--<DataGridTextColumn Header="Edad" Binding="{Binding Edad}" Width="30"/>-->
+                    <!--<DataGridTextColumn Header="Genero" Binding="{Binding Genero}" Width="100"/>-->
+                    <!--<DataGridTemplateColumn Header="Fotografía" Width="75">-->
+                    <!--<DataGridTemplateColumn.CellTemplate>-->
+                    <!--<DataTemplate>-->
+                    <!--<Image Width="75" Height="75" Source="{Binding Foto}"/>-->
+                    <!--</DataTemplate>-->
+                    <!--</DataGridTemplateColumn.CellTemplate>-->
+                    <!--</DataGridTemplateColumn>-->
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="180" />
+                    <DataGridTextColumn Header="Ver Ficha" Width="80"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800">
             <Label Content="Pacientes" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#2d2d2d" Foreground="#fff" Height="45" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
         </Border>
-        <Button x:Name="btnanadirPaciente" Content="+" FontSize="30" HorizontalAlignment="Left" Margin="1178,114,0,0" VerticalAlignment="Top" Width="60" Height="60" RenderTransformOrigin="0.5,0.5" Click="anadir_Paciente"/>
+        <Button x:Name="btnanadirPaciente" Content="+" FontSize="30" HorizontalAlignment="Left" Margin="1174,125,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="anadir_Paciente"/>
 
-        <Button x:Name="btnborrarPaciente" Content="-" FontSize="30" HorizontalAlignment="Left" Margin="1178,190,0,0" VerticalAlignment="Top" Width="60" Height="60" RenderTransformOrigin="0.5,0.5" Click="borrar_Paciente"/>
+        <Button x:Name="btnborrarPaciente" Content="-" FontSize="30" HorizontalAlignment="Left" Margin="1174,211,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="borrar_Paciente"/>
 
     </Grid>
 </Page>

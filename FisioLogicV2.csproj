@@ -15,10 +15,12 @@
     <None Remove="Assets\profile-user.png" />
     <None Remove="Assets\show-password.png" />
     <None Remove="Assets\w_user.png" />
+    <None Remove="Datos\paciente.xml" />
     <None Remove="Datos\pacientes.xml" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Datos\paciente.xml" />
     <Content Include="Datos\pacientes.xml" />
   </ItemGroup>
 

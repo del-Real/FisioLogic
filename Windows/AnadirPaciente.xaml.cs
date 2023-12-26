@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using FisioLogicV2.Classes;
+using FisioLogicV2.Pages;
 
 namespace FisioLogicV2.Windows
 {
@@ -27,7 +28,8 @@ namespace FisioLogicV2.Windows
 
         private void cbGeneroPaciente_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            
+            
         }
 
         private void Click_Cancelar_Anadir_Paciente(object sender, RoutedEventArgs e)
@@ -50,16 +52,31 @@ namespace FisioLogicV2.Windows
 
         private void Click_Anadir_Anadir_Paciente(object sender, RoutedEventArgs e)
         {
-            Paciente nuevoPac = new Paciente();
-            nuevoPac.Nombre = tbNombrePaciente.Text;
-            nuevoPac.Apellidos = tbApellidosPaciente.Text;
-            nuevoPac.Direccion = tbDireccionPaciente.Text;
-            if ((int.Parse(tbTelefonoPaciente.Text) < 0 || int.Parse(tbTelefonoPaciente.Text) > 999999999))
+            Paciente nuevoPaciente = new Paciente();
+            nuevoPaciente.IdPaciente = 0;
+            if (tbApellidosPaciente.Text == "" || tbNombrePaciente.Text == "" || tbDireccionPaciente.Text == ""
+                || tbEdadPaciente.Text == "" || tbEmailPaciente.Text == "" || tbTelefonoPaciente.Text == ""
+                || cbGeneroPaciente.SelectedIndex == -1 || (int.Parse(tbTelefonoPaciente.Text) < 0 || 
+                int.Parse(tbTelefonoPaciente.Text) > 999999999))
             {
-                MessageBox.Show("El número de teléfono es incorrecto.", "Error");
-            } else if (int.Parse(tbEdadPaciente.Text) < 0)
+                MessageBox.Show("Los campos obligatorios están incompletos o no son correctos.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
             {
-                MessageBox.Show("La edad es incorrecta.", "Error");
+                nuevoPaciente.Nombre = tbNombrePaciente.Text;
+                nuevoPaciente.Apellidos = tbApellidosPaciente.Text;
+                nuevoPaciente.Direccion = tbDireccionPaciente.Text;
+                nuevoPaciente.Email = tbEmailPaciente.Text;
+                nuevoPaciente.Genero = cbGeneroPaciente.Text;
+                nuevoPaciente.Telefono = int.Parse(tbTelefonoPaciente.Text);
+                nuevoPaciente.Edad = int.Parse(tbEdadPaciente.Text);
+                if (tbFotoPaciente != null)
+                {
+                    string rutaFoto = tbFotoPaciente.Text;
+                    Uri uriImagen = new Uri(rutaFoto, UriKind.RelativeOrAbsolute);
+                    nuevoPaciente.Foto = uriImagen;
+                    Pacientes.listaNuevos.Add(nuevoPaciente);
+                }
             }
         }
     }
