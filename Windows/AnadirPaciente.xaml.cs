@@ -36,7 +36,7 @@ namespace FisioLogicV2.Windows
         {
             this.Close();
         }
-
+        
         private void Click_Limpiar_Anadir_Paciente(object sender, RoutedEventArgs e)
         {
             tbApellidosPaciente.Text = String.Empty;
@@ -75,7 +75,7 @@ namespace FisioLogicV2.Windows
                     string rutaFoto = tbFotoPaciente.Text;
                     Uri uriImagen = new Uri(rutaFoto, UriKind.RelativeOrAbsolute);
                     nuevoPaciente.Foto = uriImagen;
-                    Pacientes.listaNuevos.Add(nuevoPaciente);
+                    //Pacientes.listaNuevos.Add(nuevoPaciente);
                 }
             }
         }

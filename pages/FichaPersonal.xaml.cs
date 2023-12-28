@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FisioLogicV2.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,8 +28,9 @@ namespace FisioLogicV2.pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Visibility = Visibility.Hidden;
-
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            Personal personal = new Personal();
+            mainWindow.mainFrame.Content = personal;
         }
     }
 }

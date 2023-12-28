@@ -9,11 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\addButton.png" />
     <None Remove="Assets\backArrow.png" />
     <None Remove="Assets\FisioLogic_positive_OG.png" />
+    <None Remove="Assets\mostrarPass.png" />
     <None Remove="Assets\m_user.png" />
     <None Remove="Assets\profile-user.png" />
-    <None Remove="Assets\show-password.png" />
+    <None Remove="Assets\removeButton.png" />
     <None Remove="Assets\w_user.png" />
     <None Remove="Datos\paciente.xml" />
     <None Remove="Datos\pacientes.xml" />
@@ -25,11 +27,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\addButton.png" />
     <Resource Include="Assets\backArrow.png" />
     <Resource Include="Assets\FisioLogic_positive_OG.png" />
     <Resource Include="Assets\m_user.png" />
     <Resource Include="Assets\profile-user.png" />
-    <Resource Include="Assets\show-password.png" />
+    <Resource Include="Assets\mostrarPass.png" />
+    <Resource Include="Assets\removeButton.png" />
     <Resource Include="Assets\w_user.png" />
   </ItemGroup>
 

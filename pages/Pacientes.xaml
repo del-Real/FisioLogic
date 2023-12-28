@@ -36,9 +36,13 @@
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800">
             <Label Content="Pacientes" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#2d2d2d" Foreground="#fff" Height="45" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
         </Border>
-        <Button x:Name="btnanadirPaciente" Content="+" FontSize="30" HorizontalAlignment="Left" Margin="1174,125,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="anadir_Paciente"/>
+        <Button x:Name="btnanadirPaciente" FontSize="30" HorizontalAlignment="Left" Margin="1174,88,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="anadir_Paciente">
+            <Image Height="50" Source="/Assets/addButton.png" Width="45"/>
+        </Button>
 
-        <Button x:Name="btnborrarPaciente" Content="-" FontSize="30" HorizontalAlignment="Left" Margin="1174,211,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="borrar_Paciente"/>
+        <Button x:Name="btnborrarPaciente" FontSize="30" HorizontalAlignment="Left" Margin="1174,170,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="borrar_Paciente">
+            <Image Height="50" Source="/Assets/removeButton.png" Width="45"/>
+        </Button>
 
     </Grid>
 </Page>

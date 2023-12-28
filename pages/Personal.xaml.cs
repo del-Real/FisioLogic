@@ -31,8 +31,11 @@ namespace FisioLogicV2.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            subFrame.Visibility = Visibility.Visible;
-            subFrame.Navigate(new Uri("Pages/FichaPersonal.xaml", UriKind.Relative));
+          
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            FichaPersonal fichaPersonal = new FichaPersonal();
+            mainWindow.mainFrame.Content = fichaPersonal;
+
         }
     }
 }

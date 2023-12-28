@@ -28,7 +28,7 @@ namespace FisioLogicV2.Pages
     public partial class Pacientes : Page
     {
         List<Paciente> listaPacientes;
-        List<Paciente> listaNuevos;
+        internal List<Paciente> listaNuevos;
         public Pacientes()
         {
             InitializeComponent();
@@ -50,7 +50,7 @@ namespace FisioLogicV2.Pages
         private List<Paciente> CargarContenidoXML()
         {   
             List<Paciente> listado = new List<Paciente>();
-            string rutaFoto = "C:\\Users\\palen\\OneDrive\\Escritorio\\Ingeniería Informática\\3º Año, 1º Cuatrimestre\\IPO\\Laboratorio\\FisioLogic\\Assets\\m_user.png";
+            string rutaFoto = "FisioLogic\\Assets\\m_user.png";
             Uri uriImagen = new Uri(rutaFoto, UriKind.RelativeOrAbsolute);
             var nuevoPaciente = new Paciente(0,"Pedro","García López","Calle 123, Ciudad A",123456789,40,"Masculino","pedro@example.com");
             nuevoPaciente.Foto = uriImagen;
