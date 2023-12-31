@@ -15,11 +15,11 @@
         <DataGrid x:Name="dgCitas" Margin="730,125,101,138" 
           AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding IdPaciente}" Width="30" />
-                <DataGridTextColumn Header="Hora" Binding="{Binding Apellidos}" Width="50" />
-                <DataGridTextColumn Header="Paciente" Binding="{Binding Nombre}" Width="130"/>
-                <DataGridTextColumn Header="Especialista" Binding="{Binding Direccion}" Width="130"/>
-                <DataGridTextColumn Header="Duracion" Binding="{Binding IdPaciente}" Width="80" />
+                <DataGridTextColumn Header="ID" Binding="{Binding IdCita}" Width="30" />
+                <DataGridTextColumn Header="Hora" Binding="{Binding Hora}" Width="50" />
+                <DataGridTextColumn Header="Paciente" Binding="{Binding Paciente}" Width="65"/>
+                <DataGridTextColumn Header="Especialista" Binding="{Binding Profesional}" Width="85"/>
+                <DataGridTextColumn Header="Duracion" Binding="{Binding Duracion}" Width="80" />
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="btnanadirCita" FontSize="30" HorizontalAlignment="Left" Margin="1174,125,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="anadir_Paciente">

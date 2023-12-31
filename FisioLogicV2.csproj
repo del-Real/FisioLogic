@@ -17,13 +17,7 @@
     <None Remove="Assets\profile-user.png" />
     <None Remove="Assets\removeButton.png" />
     <None Remove="Assets\w_user.png" />
-    <None Remove="Datos\paciente.xml" />
-    <None Remove="Datos\pacientes.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Datos\paciente.xml" />
-    <Content Include="Datos\pacientes.xml" />
+    <None Remove="Datos\Pacientes.xml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +29,7 @@
     <Resource Include="Assets\mostrarPass.png" />
     <Resource Include="Assets\removeButton.png" />
     <Resource Include="Assets\w_user.png" />
+    <Resource Include="Datos\Pacientes.xml" />
   </ItemGroup>
 
 </Project>

@@ -15,19 +15,19 @@
                       AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding IdPaciente}" Width="30" />
-                    <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}" Width="180" />
                     <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="100"/>
+                    <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}" Width="180" />
                     <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}" Width="180"/>
                     <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="100"/>
-                    <!--<DataGridTextColumn Header="Edad" Binding="{Binding Edad}" Width="30"/>-->
-                    <!--<DataGridTextColumn Header="Genero" Binding="{Binding Genero}" Width="100"/>-->
-                    <!--<DataGridTemplateColumn Header="Fotografía" Width="75">-->
-                    <!--<DataGridTemplateColumn.CellTemplate>-->
-                    <!--<DataTemplate>-->
-                    <!--<Image Width="75" Height="75" Source="{Binding Foto}"/>-->
-                    <!--</DataTemplate>-->
-                    <!--</DataGridTemplateColumn.CellTemplate>-->
-                    <!--</DataGridTemplateColumn>-->
+                    <DataGridTextColumn Header="Edad" Binding="{Binding Edad}" Width="30"/>
+                    <DataGridTextColumn Header="Genero" Binding="{Binding Genero}" Width="100"/>
+                    <DataGridTemplateColumn Header="Fotografía" Width="75">
+                    <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                    <Image Width="75" Height="75" Source="{Binding Foto}"/>
+                    </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                     <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="180" />
                     <DataGridTextColumn Header="Ver Ficha" Width="80"/>
                 </DataGrid.Columns>

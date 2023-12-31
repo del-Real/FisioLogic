@@ -52,17 +52,18 @@ namespace FisioLogicV2.Pages
             List<Paciente> listado = new List<Paciente>();
             string rutaFoto = "FisioLogic\\Assets\\m_user.png";
             Uri uriImagen = new Uri(rutaFoto, UriKind.RelativeOrAbsolute);
-            var nuevoPaciente = new Paciente(0,"Pedro","García López","Calle 123, Ciudad A",123456789,40,"Masculino","pedro@example.com");
+            var nuevoPaciente = new Paciente(0, "Pedro", "García López", "Calle 123, Ciudad A", 123456789, 40, "Masculino", "pedro@example.com");
             nuevoPaciente.Foto = uriImagen;
-            for (int i=0; i<10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 nuevoPaciente.IdPaciente = listado.Count;
                 listado.Add(nuevoPaciente);
             }
-            // Cargar contenido de prueba
             /*
+            // Cargar contenido de prueba
+            
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Datos/paciente.xml", UriKind.Relative));
+            var fichero = Application.GetResourceStream(new Uri("Datos/pacientes.xml", UriKind.Relative));
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
@@ -70,14 +71,9 @@ namespace FisioLogicV2.Pages
                 nuevoPaciente.IdPaciente = Convert.ToInt32(node.Attributes["IdPaciente"].Value);
                 nuevoPaciente.Nombre = node.Attributes["Nombre"].Value;
                 nuevoPaciente.Apellidos = node.Attributes["Apellidos"].Value;
-                nuevoPaciente.Direccion = node.Attributes["Direccion"].Value;
-                nuevoPaciente.Telefono = Convert.ToInt32(node.Attributes["Teléfono"].Value);
-                nuevoPaciente.Edad = Convert.ToInt32(node.Attributes["Edad"].Value);
-                nuevoPaciente.Genero = node.Attributes["Género"].Value;
-                nuevoPaciente.Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Absolute);
-                nuevoPaciente.Email = node.Attributes["Email"].Value;
+      
             }*/
-            
+
             return listado;
             
         }
