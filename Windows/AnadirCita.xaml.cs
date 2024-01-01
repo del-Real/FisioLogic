@@ -23,5 +23,20 @@ namespace FisioLogicV2.Windows
         {
             InitializeComponent();
         }
+
+        private void Click_Anadir_Anadir_Paciente(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Click_Limpiar_Anadir_Paciente(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Click_Cancelar_Anadir_Paciente(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
