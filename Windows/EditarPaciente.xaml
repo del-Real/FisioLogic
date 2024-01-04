@@ -1,0 +1,24 @@
+﻿<Page x:Class="FisioLogicV2.Windows.EditarPaciente"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FisioLogicV2.Windows"
+      mc:Ignorable="d" 
+      d:DesignHeight="440" d:DesignWidth="240"
+      Title="EditarPaciente" Foreground="#FFFF">
+
+    <Grid>
+        <TextBox x:Name="txtNombre" Margin="25,25,25,390"/>
+        <TextBox x:Name="txtApellido" Margin="25,75,25,340" />
+        <TextBox x:Name="txtDireccion" Margin="25,125,25,290" />
+        <TextBox x:Name="txtCiudad" Margin="25,175,25,240" />
+        <TextBox x:Name="txtTelefono" Margin="25,225,25,190" />
+        <TextBox x:Name="txtEdad" Margin="25,275,25,140" />
+        <TextBox x:Name="txtEmail" Margin="25,325,25,90" />
+        <!-- Agrega más controles TextBox para otros campos del paciente -->
+
+        <!-- Botón para guardar los cambios -->
+        <Button Content="Guardar Cambios" Click="GuardarCambios_Click" Margin="0,394,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="29" Width="154" />
+    </Grid>
+</Page>

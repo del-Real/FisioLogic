@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:FisioLogicV2.pages"
       mc:Ignorable="d" 
       d:DesignHeight="865" d:DesignWidth="1250"
-      Title="Ficha Personal" Background="#fff">
+      Title="FichaPersonal">
 
     <Grid>
         <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10"/>
@@ -27,9 +27,10 @@
         <Label Content="Consultar próximas citas" HorizontalAlignment="Left" Margin="574,548,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="62" Width="392" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="564,466,276,331"/>
         <Label Content="Consultar listado pacientes recientes" HorizontalAlignment="Left" Margin="574,470,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="62" Width="392" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Button Margin="22,79,1151,744" Background="#fff" Click="Button_Click">
+        <Button Margin="22,79,1151,744" Background="#fff" Click="ButtonBackFichaPersonal_Click">
             <Image Source="/Assets/backArrow.png" Height="34" Width="61"/>
         </Button>
+
 
     </Grid>
 </Page>

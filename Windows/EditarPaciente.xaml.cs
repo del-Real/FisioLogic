@@ -12,24 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using FisioLogicV2.Pages;
+using FisioLogicV2.Classes;
 
-namespace FisioLogicV2.pages
+namespace FisioLogicV2.Windows
 {
     /// <summary>
-    /// Lógica de interacción para FichaPersonal.xaml
+    /// Lógica de interacción para EditarPaciente.xaml
     /// </summary>
-    public partial class FichaPersonal : Page
+    public partial class EditarPaciente : Window
     {
-        public FichaPersonal()
+        public EditarPaciente(Paciente p)
         {
             InitializeComponent();
         }
-        private void ButtonBackFichaPersonal_Click(object sender, RoutedEventArgs e)
+
+        private void GuardarCambios_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            Personal personal = new Personal();
-            mainWindow.mainFrame.Content = personal;
+
         }
     }
 }

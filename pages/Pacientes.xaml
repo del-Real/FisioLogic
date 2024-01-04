@@ -7,41 +7,42 @@
       mc:Ignorable="d" 
       d:DesignHeight="865" d:DesignWidth="1250"
       Title="Pacientes" Background="#32e2d0">
-
+       
     <Grid>
-
         <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10" RenderTransformOrigin="0.498,0.523">
-            <DataGrid x:Name="dgPacientes" Margin="80,75,80,50" 
+            <DataGrid x:Name="dgPacientes" Margin="80,75,150,50" AlternatingRowBackground="LightBlue" AlternationCount="2"
                       AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding IdPaciente}" Width="30" />
+                    <DataGridTextColumn Header="ID" Binding="{Binding IdPaciente}" Width="40"/>
                     <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="100"/>
                     <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}" Width="180" />
-                    <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}" Width="180"/>
-                    <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="100"/>
-                    <DataGridTextColumn Header="Edad" Binding="{Binding Edad}" Width="30"/>
-                    <DataGridTextColumn Header="Genero" Binding="{Binding Genero}" Width="100"/>
-                    <DataGridTemplateColumn Header="Fotografía" Width="75">
-                    <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                    <Image Width="75" Height="75" Source="{Binding Foto}"/>
-                    </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}" Width="200"/>
+                    <DataGridTextColumn Header="Ciudad" Binding="{Binding Ciudad}" Width="100"/>
+                    <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="110"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="170" />
+                    <DataGridTemplateColumn Header="Ver Ficha" Width="80">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="ImageButton_Click">
+                                    <Image Source="/Assets/mostrarPass.png" Width="40" Height="40"/>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="180" />
-                    <DataGridTextColumn Header="Ver Ficha" Width="80"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800">
             <Label Content="Pacientes" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#2d2d2d" Foreground="#fff" Height="45" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
         </Border>
-        <Button x:Name="btnanadirPaciente" FontSize="30" HorizontalAlignment="Left" Margin="1174,88,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="anadir_Paciente">
+        <Button x:Name="btnanadirPaciente" FontSize="30" HorizontalAlignment="Left" Margin="1134,100,0,0" VerticalAlignment="Top" Width="70" Height="70" Click="anadir_Paciente">
             <Image Height="50" Source="/Assets/addButton.png" Width="45"/>
         </Button>
-
-        <Button x:Name="btnborrarPaciente" FontSize="30" HorizontalAlignment="Left" Margin="1174,170,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="borrar_Paciente">
+        <Button x:Name="btnborrarPaciente" FontSize="30" HorizontalAlignment="Left" Margin="1134,192,0,0" VerticalAlignment="Top" Width="70" Height="70" Click="borrar_Paciente">
             <Image Height="50" Source="/Assets/removeButton.png" Width="45"/>
+        </Button>
+        <Button x:Name="btneditarPaciente" FontSize="30" HorizontalAlignment="Left" Margin="1134,284,0,0" VerticalAlignment="Top" Width="70" Height="70" Click="editar_Paciente">
+            <Image Height="50" Source="/Assets/edit.png" Width="45"/>
         </Button>
 
     </Grid>

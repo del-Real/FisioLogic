@@ -12,24 +12,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FisioLogicV2.Classes;
 using FisioLogicV2.Pages;
 
 namespace FisioLogicV2.pages
 {
     /// <summary>
-    /// Lógica de interacción para FichaPersonal.xaml
+    /// Lógica de interacción para FichaPaciente.xaml
     /// </summary>
-    public partial class FichaPersonal : Page
+    public partial class FichaPaciente : Page
     {
-        public FichaPersonal()
+        public FichaPaciente()
         {
             InitializeComponent();
         }
-        private void ButtonBackFichaPersonal_Click(object sender, RoutedEventArgs e)
+        private void ButtonBackFichaPaciente_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            Personal personal = new Personal();
-            mainWindow.mainFrame.Content = personal;
+            Pacientes paciente = new Pacientes();
+            mainWindow.mainFrame.Content = paciente;
         }
     }
 }

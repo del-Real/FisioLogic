@@ -14,13 +14,13 @@
         <Label Content="Paciente" FontSize="10" FontWeight="Bold" HorizontalAlignment="Left" Margin="27,190,0,0" VerticalAlignment="Top" Width="48"/>
         <TextBox x:Name="tbEdadPaciente" HorizontalAlignment="Left" Margin="27,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
         <Label Content="Profesional" FontSize="10" FontWeight="Bold" HorizontalAlignment="Left" Margin="27,231,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbGeneroPaciente" HorizontalAlignment="Left" Margin="185,261,0,0"Margin="205,252,0,0" VerticalAlignment="Top" Width="60" Height="19">
+        <ComboBox x:Name="cbGeneroPaciente" HorizontalAlignment="Left" Margin="185,261,0,0" VerticalAlignment="Top" Width="60" Height="19">
             <ComboBox.Items>
                 <ComboBoxItem Content="Masculino"/>
                 <ComboBoxItem Content="Femenino"/>
             </ComboBox.Items>
         </ComboBox>
-        <Label Content="Hora" FontSize="10" FontWeight="Bold" HorizontalAlignment="Left" Margin="185,239,0,0"Margin="205,231,0,0" VerticalAlignment="Top" Height="21"/>
+        <Label Content="Hora" FontSize="10" FontWeight="Bold" HorizontalAlignment="Left" Margin="185,239,0,0" VerticalAlignment="Top" Height="21"/>
         <TextBox x:Name="tbFotoPaciente" HorizontalAlignment="Center" Margin="0,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="43"/>
         <Label Content="Información" FontSize="10" FontWeight="Bold" HorizontalAlignment="Left" Margin="25,273,0,0" VerticalAlignment="Top"/>
         <Label Content="(Opcional)" FontSize="9" HorizontalAlignment="Left" Margin="91,274,0,0" VerticalAlignment="Top"/>

@@ -21,7 +21,7 @@ namespace FisioLogicV2.Windows
     {
         public AnadirCita()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         private void Click_Anadir_Anadir_Paciente(object sender, RoutedEventArgs e)

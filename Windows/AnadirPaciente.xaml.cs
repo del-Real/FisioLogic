@@ -26,12 +26,6 @@ namespace FisioLogicV2.Windows
             InitializeComponent();
         }
 
-        private void cbGeneroPaciente_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-            
-        }
-
         private void Click_Cancelar_Anadir_Paciente(object sender, RoutedEventArgs e)
         {
             this.Close();
