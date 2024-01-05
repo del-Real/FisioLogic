@@ -19,11 +19,6 @@ namespace FisioLogicV2.Classes
         public Uri Foto { set; get; }
         public string Email { set; get; }
 
-        public Paciente()
-        {
-
-        }
-
         public Paciente(int id, string nombre, string apellidos, string direccion, string ciudad, int telefono, int edad, string genero, Uri foto, string email)
         {
             IdPaciente = id;

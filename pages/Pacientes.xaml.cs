@@ -30,7 +30,7 @@ namespace FisioLogicV2.Pages
     public partial class Pacientes : Page
     {
         //private EditarPaciente ventanaeditar;
-        int id = 0;
+        //int id = 0;
         List<Paciente> listaPacientes;
         public Pacientes()
         {
@@ -42,6 +42,13 @@ namespace FisioLogicV2.Pages
             // Indicar que el origen de datos del ListBox es listadoPeliculas
             
             dgPacientes.ItemsSource = listaPacientes;
+            if (dgPacientes.SelectedCells.Count == 1)
+            {
+                btn_anadir_pac.IsEnabled = false;
+                btn_modificar_pac.IsEnabled = true;
+                btn_eliminar_pac.IsEnabled = true;
+                
+            }
         }
         
         private List<Paciente> CargarContenidoXML()
@@ -80,35 +87,19 @@ namespace FisioLogicV2.Pages
             
         }
 
-        private void anadir_Paciente(object sender, RoutedEventArgs e)
+        private void btn_eliminar_pac_Click(object sender, RoutedEventArgs e)
         {
-            AnadirPaciente ventanaAnadirPaciente = new AnadirPaciente();
-            // Mostrar la ventana
-            ventanaAnadirPaciente.Show();
-        }
-        
-        private void ImageButton_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow mainWindow = (MainWindow)System.Windows.Application.Current.MainWindow;
-            FichaPaciente fichaPaciente = new FichaPaciente();
-            mainWindow.mainFrame.Content = fichaPaciente;
-        }
-        
-        private void borrar_Paciente(object sender, RoutedEventArgs e)
-        {
-            listaPacientes.RemoveAt(dgPacientes.SelectedIndex);
-            dgPacientes.Items.Refresh();
+
         }
 
-        private void editar_Paciente(object sender, RoutedEventArgs e)
+        private void btn_modificar_pac_Click(object sender, RoutedEventArgs e)
         {
-            if(dgPacientes.SelectedIndex < 1)
-            {
-                MessageBox.Show("No se ha seleccionado ningún paciente.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            Paciente seleccion = (Paciente)dgPacientes.SelectedItem;
-            //ventanaeditar = new EditarPaciente(seleccion);
-            //ventanaeditar.Show();
+
+        }
+
+        private void btn_anadir_pac_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
