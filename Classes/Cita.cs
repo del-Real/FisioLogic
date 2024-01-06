@@ -9,15 +9,15 @@ public class Cita
 {
     public int IdCita { get; set; }
     public int Dia { set; get; }
-    public int Hora { set; get; }
+    public string Hora { set; get; }
     public int Mes { set; get; }
     public int Year { set; get; }
-    public int Paciente { set; get; }
-    public int Profesional { set; get; }
+    public string Paciente { set; get; }
+    public string Profesional { set; get; }
     public int Duracion { set; get; }
     public string Informacion { set; get; }
 
-    public Cita(int id, int dia, int hora, int mes, int year, int paciente, int profesional, int duracion, string informacion)
+    public Cita(int id, int dia, string hora, int mes, int year, string paciente, string profesional, int duracion, string informacion)
     {
         IdCita = id;
         Dia = dia;

@@ -13,7 +13,7 @@
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800"/>
         <Label Content="Citas" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="35" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
         <DataGrid x:Name="dgCitas" Margin="730,125,101,378" 
-          AutoGenerateColumns="False">
+          AutoGenerateColumns="False" SelectionChanged="dgCitas_SelectionChanged"> 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding IdCita}" Width="30" />
                 <DataGridTextColumn Header="Hora" Binding="{Binding Hora}" Width="50" />
