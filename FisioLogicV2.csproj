@@ -12,6 +12,7 @@
     <None Remove="Assets\addButton.png" />
     <None Remove="Assets\agregar.png" />
     <None Remove="Assets\backArrow.png" />
+    <None Remove="Assets\edit.png" />
     <None Remove="Assets\editar.png" />
     <None Remove="Assets\eliminar.png" />
     <None Remove="Assets\Femenino.PNG" />
@@ -30,14 +31,10 @@
     <Resource Include="Assets\addButton.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\agregar.png" />
     <Resource Include="Assets\backArrow.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\editar.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\eliminar.png">
+    <Resource Include="Assets\edit.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Femenino.PNG">

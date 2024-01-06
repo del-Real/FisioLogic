@@ -63,19 +63,19 @@
         <StackPanel HorizontalAlignment="Center" Margin="140,805,500,25" Width="500">
             <Button x:Name="btn_anadir_pac" Width="128" ToolTip="Añadir un paciente" HorizontalAlignment="Left" Height="37" VerticalAlignment="Center" Click="btn_anadir_pac_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="/Assets/agregar.png" Width="16" Height="16" Margin="0,0,5,0"/>
+                    <Image Source="/Assets/addButton.png" Width="16" Height="16" Margin="0,0,5,0"/>
                     <TextBlock Text="Añadir" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
             <Button x:Name="btn_modificar_pac" Width="128" Margin="0,-40,1,1" ToolTip="Modificar un paciente" HorizontalAlignment="Center" Height="37" VerticalAlignment="Center" IsEnabled="False" Click="btn_modificar_pac_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="/Assets/editar.png" Width="16" Height="16" Margin="0,0,5,0"/>
+                    <Image Source="/Assets/edit.png" Width="16" Height="16" Margin="0,0,5,0"/>
                     <TextBlock Text="Modificar" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
             <Button x:Name="btn_eliminar_pac" Width="128" Margin="0,-40,1,1" ToolTip="Eliminar un paciente" HorizontalAlignment="Right" Height="37" IsEnabled="False" Click="btn_eliminar_pac_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="/Assets//eliminar.png" Width="16" Height="16" Margin="0,0,5,0"/>
+                    <Image Source="/Assets//removeButton.png" Width="16" Height="16" Margin="0,0,5,0"/>
                     <TextBlock Text="Eliminar" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>

@@ -72,7 +72,7 @@ namespace FisioLogicV2.Pages
             // Cargar contenido de prueba
             
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Datos/pacientes.xml", UriKind.Relative));
+            var fichero = Application.GetResourceStream(new Uri("Datos/Pacientes.xml", UriKind.Relative));
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
