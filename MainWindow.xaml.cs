@@ -22,29 +22,29 @@ namespace FisioLogicV2
         {
             InitializeComponent();
         }
-   
-        private void btn1_Click(object sender, RoutedEventArgs e)
+
+        private void btnCitas(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new Uri("Pages/Citas.xaml", UriKind.Relative));
         }
 
-        private void btn2_Click(object sender, RoutedEventArgs e)
+        private void btnPacientes(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new Uri("Pages/Pacientes.xaml", UriKind.Relative));
         }
 
-        private void btn3_Click(object sender, RoutedEventArgs e)
+        private void btnPersonal(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new Uri("Pages/Personal.xaml", UriKind.Relative));
         }
 
-        private void btn4_Click(object sender, RoutedEventArgs e)
+        private void btnHistoriales(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new Uri("Pages/Historiales.xaml", UriKind.Relative));
         }
 
         // Cierre sesión
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void closeSession(object sender, RoutedEventArgs e)
         {
 
             LoginScreen loginScreen = new LoginScreen();
@@ -52,13 +52,16 @@ namespace FisioLogicV2
 
             // cierre mainWindow
             this.Close();
-
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        // Ventana ayuda
+        private void help(object sender, RoutedEventArgs e)
         {
             Ayuda ayuda = new Ayuda();
             ayuda.Show();
         }
+
+
+     
     }
 }

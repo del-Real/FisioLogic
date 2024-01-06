@@ -12,19 +12,19 @@
             <ColumnDefinition Width="101*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Background="#FF32E2D0" Grid.ColumnSpan="2" Margin="26,270,1236,251">
-            <Button x:Name="btn1" Content="Citas" Click="btn1_Click" Background="#FFF" Height="65" FontSize="22" FontFamily="Leelawadee" FontWeight="Bold" Foreground="#545656" Margin="10" BorderThickness="0,0,0,0"/>
-            <Button x:Name="btn2" Content="Pacientes" Click="btn2_Click" Background="#FFF" Height="65" FontSize="22" FontFamily="Leelawadee" FontWeight="Bold"  Foreground="#545656" Margin="10" BorderThickness="0,0,0,0"/>
-            <Button x:Name="btn3" Content="Personal" Click="btn3_Click" Background="#FFF" Height="65" FontSize="22" FontFamily="Leelawadee" FontWeight="Bold"  Foreground="#545656" Margin="10" BorderThickness="0,0,0,0"/>
-            <Button x:Name="btn4" Content="Historiales" Click="btn4_Click" Background="#FFF" Height="65" FontSize="22" FontFamily="Leelawadee" FontWeight="Bold"  Foreground="#545656" Margin="10" BorderThickness="0,0,0,0"/>
+            <Button x:Name="btn1" Content="Citas" Click="btnCitas" Background="#FFF" Height="65" FontSize="22" FontFamily="Leelawadee" FontWeight="Bold" Foreground="#545656" Margin="10" BorderThickness="0,0,0,0"/>
+            <Button x:Name="btn2" Content="Pacientes" Click="btnPacientes" Background="#FFF" Height="65" FontSize="22" FontFamily="Leelawadee" FontWeight="Bold"  Foreground="#545656" Margin="10" BorderThickness="0,0,0,0"/>
+            <Button x:Name="btn3" Content="Personal" Click="btnPersonal" Background="#FFF" Height="65" FontSize="22" FontFamily="Leelawadee" FontWeight="Bold"  Foreground="#545656" Margin="10" BorderThickness="0,0,0,0"/>
+            <Button x:Name="btn4" Content="Historiales" Click="btnHistoriales" Background="#FFF" Height="65" FontSize="22" FontFamily="Leelawadee" FontWeight="Bold"  Foreground="#545656" Margin="10" BorderThickness="0,0,0,0"/>
         </StackPanel>
         <Image Source="/Assets/FisioLogic_positive_OG.png" Margin="21,43,1276,741" Grid.ColumnSpan="2" Width="200" MinWidth="200" MaxWidth="200" />
         <Frame  x:Name="mainFrame" Source="Pages/Citas.xaml" Background="#fff" NavigationUIVisibility="Hidden" Height="865" Width="1250" VerticalAlignment="Top" Grid.Column="1" Margin="0,10,10,0" Grid.RowSpan="4" />
         <Border BorderThickness="1" CornerRadius="10" Margin="35,683,6,116" Background="#fff" Opacity="0.5"/>
         <Image Margin="38,701,118,136" Source="/Assets/profile-user.png" Opacity="0.5" Width="85" MinWidth="85" MaxWidth="85" MaxHeight="85"/>
         <Label Content="Admin" HorizontalAlignment="Left" Margin="112,698,0,0" VerticalAlignment="Top" Width="107" FontSize="16" FontWeight="Bold" FontFamily="Leelawadee UI"/>
-        <Button Content="Cerrar Sesión" Background="Transparent" Foreground="#fff" HorizontalAlignment="Left" Margin="113,727,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" FontFamily="Leelawadee" FontSize="15" FontWeight="Bold" BorderThickness="0,0,0,0"/>
+        <Button Content="Cerrar Sesión" Background="Transparent" Foreground="#fff" HorizontalAlignment="Left" Margin="113,727,0,0" VerticalAlignment="Top" Width="94" Click="closeSession" FontFamily="Leelawadee" FontSize="15" FontWeight="Bold" BorderThickness="0,0,0,0"/>
         <Border BorderThickness="1" CornerRadius="10" Margin="35,803,55,35" Background="#fff" Opacity="0.5">
-            <Button x:Name="btnHelp" Content="Ayuda" Margin="9,13,-1,13" Background="Transparent" Foreground="#000" BorderThickness="0,0,0,0" FontWeight="Bold" FontFamily="Leelawadee" FontSize="16" Click="Button_Click_1"/>
+            <Button x:Name="btnHelp" Content="Ayuda" Margin="9,13,-1,13" Background="Transparent" Foreground="#000" BorderThickness="0,0,0,0" FontWeight="Bold" FontFamily="Leelawadee" FontSize="16" Click="help"/>
         </Border>
         <Image Margin="47,813,146,45" Source="/Assets/help.png" Opacity="0.5" MaxWidth="45" MaxHeight="45"/>
     </Grid>

@@ -49,19 +49,22 @@ namespace FisioLogic.pages
 
         }
 
-        private void anadir_Paciente(object sender, RoutedEventArgs e)
+         private void addCita(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void modifyCita(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void borrar_Paciente(object sender, RoutedEventArgs e)
+        private void deleteCita(object sender, RoutedEventArgs e)
         {
 
         }
 
         private void SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-     
 
         }
     }

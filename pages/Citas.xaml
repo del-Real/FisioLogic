@@ -20,15 +20,16 @@
                 <DataGridTextColumn Header="Paciente" Binding="{Binding Paciente}" Width="65"/>
                 <DataGridTextColumn Header="Especialista" Binding="{Binding Profesional}" Width="85"/>
                 <DataGridTextColumn Header="Duracion" Binding="{Binding Duracion}" Width="80" />
+                <DataGridTextColumn Header="Informacion" Binding="{Binding Informacion}" Width="80" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnanadirCita" Content="Añadir Cita" FontSize="16" HorizontalAlignment="Left" Margin="730,753,0,75" Width="129" Click="anadir_Paciente" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+        <Button x:Name="btnanadirCita" Content="Añadir Cita" FontSize="16" HorizontalAlignment="Left" Margin="730,753,0,75" Width="129" Click="addCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
         <Image Source="/Assets/addButton.png" Margin="735,757,492,78"/>
 
-        <Button x:Name="btneditarCita" Content="Modificar Cita" FontSize="16" HorizontalAlignment="Left" Margin="872,753,0,75" Width="139" Click="borrar_Paciente" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+        <Button x:Name="btneditarCita" Content="Modificar Cita" FontSize="16" HorizontalAlignment="Left" Margin="872,753,0,75" Width="139" Click="modifyCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
         <Image Source="/Assets/edit.png" Margin="878,759,348,82"/>
 
-        <Button x:Name="btnborrarCita" Content="Eliminar Cita"  FontSize="16" HorizontalAlignment="Left" Margin="1022,753,0,75" Width="127" Click="borrar_Paciente" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+        <Button x:Name="btnborrarCita" Content="Eliminar Cita"  FontSize="16" HorizontalAlignment="Left" Margin="1022,753,0,75" Width="127" Click="deleteCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
         <Image Source="/Assets/removeButton.png" Margin="1026,757,196,80"/>
         <Viewbox Margin="25,97,525,106">
             <Calendar Height="168" Width="187" BorderBrush="#32e2d0" SelectedDatesChanged="SelectedDateChanged" />
