@@ -9,6 +9,9 @@
       Title="Pacientes" Background="#32e2d0">
 
     <Grid>
+        <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10"/>
+
+
         <DataGrid x:Name="dgPacientes" Margin="20,75,384,70" AlternatingRowBackground="LightBlue" AlternationCount="2"
           AutoGenerateColumns="False">
             <DataGrid.Columns>
@@ -19,7 +22,7 @@
                 <DataGridTextColumn Header="Ciudad" Binding="{Binding Ciudad}" Width="100"/>
                 <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="110"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="170" />
-                
+
             </DataGrid.Columns>
         </DataGrid>
         <Label Content="Ficha Paciente" Margin="890,160,20,650" FontSize="16" FontWeight="Bold"/>
@@ -80,7 +83,7 @@
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800">
             <Label Content="Pacientes" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#2d2d2d" Foreground="#fff" Height="45" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
         </Border>
-        
+
 
     </Grid>
 </Page>

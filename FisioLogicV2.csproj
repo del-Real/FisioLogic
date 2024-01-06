@@ -10,8 +10,14 @@
 
   <ItemGroup>
     <None Remove="Assets\addButton.png" />
+    <None Remove="Assets\agregar.png" />
     <None Remove="Assets\backArrow.png" />
+    <None Remove="Assets\editar.png" />
+    <None Remove="Assets\eliminar.png" />
+    <None Remove="Assets\Femenino.PNG" />
     <None Remove="Assets\FisioLogic_positive_OG.png" />
+    <None Remove="Assets\help.png" />
+    <None Remove="Assets\Masculino.PNG" />
     <None Remove="Assets\mostrarPass.png" />
     <None Remove="Assets\m_user.png" />
     <None Remove="Assets\profile-user.png" />
@@ -21,15 +27,49 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\addButton.png" />
-    <Resource Include="Assets\backArrow.png" />
-    <Resource Include="Assets\FisioLogic_positive_OG.png" />
-    <Resource Include="Assets\m_user.png" />
-    <Resource Include="Assets\profile-user.png" />
-    <Resource Include="Assets\mostrarPass.png" />
-    <Resource Include="Assets\removeButton.png" />
-    <Resource Include="Assets\w_user.png" />
-    <Resource Include="Datos\Pacientes.xml" />
+    <Resource Include="Assets\addButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\agregar.png" />
+    <Resource Include="Assets\backArrow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\editar.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\eliminar.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Femenino.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\FisioLogic_positive_OG.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\help.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Masculino.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\m_user.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\profile-user.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\mostrarPass.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\removeButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\w_user.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Datos\Pacientes.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

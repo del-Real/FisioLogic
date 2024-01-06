@@ -137,5 +137,11 @@ namespace FisioLogicV2.Windows
             // Toggle visibility of PasswordBox and TextBox
             lbShowPass.Content = passContrasena.Password;
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Ayuda ayuda = new Ayuda();
+            ayuda.Show();
+        }
     }
 }

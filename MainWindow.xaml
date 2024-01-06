@@ -23,5 +23,9 @@
         <Image Margin="28,767,139,70" Source="/Assets/profile-user.png" Opacity="0.5" Width="85" MinWidth="85" MaxWidth="85"/>
         <Label Content="Admin" HorizontalAlignment="Left" Margin="103,764,0,0" VerticalAlignment="Top" Width="107" FontSize="16" FontWeight="Bold" FontFamily="Leelawadee UI"/>
         <Button Content="Cerrar Sesión" Background="Transparent" Foreground="#fff" HorizontalAlignment="Left" Margin="104,793,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" FontFamily="Leelawadee" FontSize="15" FontWeight="Bold" BorderThickness="0,0,0,0"/>
+        <Border BorderThickness="1" CornerRadius="10" Margin="90,641,0,197" Background="#fff" Opacity="0.5">
+            <Button x:Name="btnHelp" Content="Ayuda" Margin="9,13,-1,13" Background="Transparent" Foreground="#000" BorderThickness="0,0,0,0" FontWeight="Bold" FontFamily="Leelawadee" FontSize="16" Click="Button_Click_1"/>
+        </Border>
+        <Image Margin="102,651,91,207" Source="/Assets/help.png" Opacity="0.5"/>
     </Grid>
 </Window>
