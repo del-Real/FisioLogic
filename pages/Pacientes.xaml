@@ -13,15 +13,15 @@
 
 
         <DataGrid x:Name="dgPacientes" Margin="20,75,384,70" AlternatingRowBackground="LightBlue" AlternationCount="2"
-          AutoGenerateColumns="False">
+          AutoGenerateColumns="False" SelectionChanged="dgPacientes_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding IdPaciente}" Width="40"/>
-                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="100"/>
-                <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}" Width="180" />
+                <DataGridTextColumn Header="ID" Binding="{Binding IdPaciente}" Width="30"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="80"/>
+                <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}" Width="158" />
                 <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}" Width="200"/>
                 <DataGridTextColumn Header="Ciudad" Binding="{Binding Ciudad}" Width="100"/>
                 <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="110"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="170" />
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="160" />
 
             </DataGrid.Columns>
         </DataGrid>
@@ -51,13 +51,21 @@
                 <Label Content="Telefono" Grid.Row="5" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
                 <Label Content="Edad" Grid.Row="6" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
                 <Label Content="Email" Grid.Row="7" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
-                <TextBox x:Name="anadir_nombre_pac" TextWrapping="Wrap" Text="" Grid.Column="1"  Grid.Row="1" Visibility="Hidden"/>
-                <TextBox x:Name="anadir_apellido_pac" TextWrapping="Wrap" Text="" Grid.Column="1" Grid.Row="2" Visibility="Hidden"/>
-                <TextBox x:Name="anadir_direccion_pac" TextWrapping="Wrap" Text="" Grid.Column="1" Grid.Row="3" Visibility="Hidden"/>
-                <TextBox x:Name="anadir_ciudad_pac" TextWrapping="Wrap" Text="" Grid.Column="1" Grid.Row="4" Visibility="Hidden"/>
-                <TextBox x:Name="anadir_telefono_pac" TextWrapping="Wrap" Text="" Grid.Column="1" Grid.Row="5" Visibility="Hidden"/>
-                <TextBox x:Name="anadir_edad_pac" TextWrapping="Wrap" Text="" Grid.Column="1" Grid.Row="6" Visibility="Hidden"/>
-                <TextBox x:Name="anadir_email_pac" TextWrapping="Wrap" Text="" Grid.Column="1" Grid.Row="7" Visibility="Hidden"/>
+                <Image x:Name="foto_pac" Grid.Column="2" Margin="2,8,4,2" Grid.RowSpan="3" Source="{Binding SelectedItem.Foto, ElementName=dgPacientes}"/>
+                <TextBlock x:Name="nombre_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Nombre}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
+                <TextBlock x:Name="apellidos_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Apellidos}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
+                <TextBlock x:Name="direccion_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Direccion}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
+                <TextBlock x:Name="ciudad_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Ciudad}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
+                <TextBlock x:Name="telefono_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Telefono}" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
+                <TextBlock x:Name="edad_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Edad}" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
+                <TextBlock x:Name="email_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Email}" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
+                <TextBox x:Name="tb_nombre_pac" TextWrapping="Wrap" Grid.Column="1"  Grid.Row="1" Visibility="Hidden" Height="23"/>
+                <TextBox x:Name="tb_apellido_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2" Visibility="Hidden" Height="23"/>
+                <TextBox x:Name="tb_direccion_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3" Visibility="Hidden" Height="23"/>
+                <TextBox x:Name="tb_ciudad_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4" Visibility="Hidden" Height="23"/>
+                <TextBox x:Name="tb_telefono_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="5" Visibility="Hidden" Height="23"/>
+                <TextBox x:Name="tb_edad_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="6" Visibility="Hidden" Height="23"/>
+                <TextBox x:Name="tb_email_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="7" Visibility="Hidden" Height="23"/>
             </Grid>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Margin="140,805,500,25" Width="500">
@@ -80,10 +88,34 @@
                 </StackPanel>
             </Button>
         </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Margin="910,680,0,150" Width="300">
+            <Button x:Name="btn_cancelar_modificar_pac" Width="126" ToolTip="Pulsar para cancelar" HorizontalAlignment="Left" Height="37" Click="btn_cancelar_modificar_pac_Click" Visibility="Hidden">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Assets/cancel.png" Width="16" Height="16" Margin="0,0,5,0"/>
+                    <TextBlock Text="Cancelar" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btn_confirmar_modificar_pac" Width="128" Height="37" ToolTip="Pulsar para confirmar" HorizontalAlignment="Right" Click="btn_confirmar_modificar_pac_Click" Margin="0,-39,0,0" Visibility="Hidden">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Assets/confirm.png" Width="16" Height="16" Margin="0,0,5,0"/>
+                    <TextBlock Text="Confirmar" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btn_cancelar_anadir_pac" Width="126" ToolTip="Pulsar para cancelar" HorizontalAlignment="Left" Height="37" Click="btn_cancelar_anadir_pac_Click" Visibility="Hidden">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Assets/cancel.png" Width="16" Height="16" Margin="0,0,5,0"/>
+                    <TextBlock Text="Cancelar" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btn_confirmar_anadir_pac" Width="128" Height="37" ToolTip="Pulsar para confirmar" HorizontalAlignment="Right" Click="btn_confirmar_anadir_pac_Click" Margin="0,-39,0,0" Visibility="Hidden">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Assets/confirm.png" Width="16" Height="16" Margin="0,0,5,0"/>
+                    <TextBlock Text="Confirmar" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800">
             <Label Content="Pacientes" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#2d2d2d" Foreground="#fff" Height="45" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
         </Border>
-
-
     </Grid>
 </Page>

@@ -42,13 +42,7 @@ namespace FisioLogicV2.Pages
             // Indicar que el origen de datos del ListBox es listadoPeliculas
             
             dgPacientes.ItemsSource = listaPacientes;
-            if (dgPacientes.SelectedCells.Count == 1)
-            {
-                btn_anadir_pac.IsEnabled = false;
-                btn_modificar_pac.IsEnabled = true;
-                btn_eliminar_pac.IsEnabled = true;
-                
-            }
+            
         }
         
         private List<Paciente> CargarContenidoXML()
@@ -89,15 +83,116 @@ namespace FisioLogicV2.Pages
 
         private void btn_eliminar_pac_Click(object sender, RoutedEventArgs e)
         {
-
+            listaPacientes.RemoveAt(dgPacientes.SelectedIndex);
+            dgPacientes.Items.Refresh();
         }
 
         private void btn_modificar_pac_Click(object sender, RoutedEventArgs e)
         {
+            if(dgPacientes.SelectedItems.Count > 1)
+            {
+                MessageBox.Show("No se puede modificar más de un paciente simultáneamente.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }else
+            {
+                foreach(var column in dgPacientes.Columns)
+                {
+                    column.Visibility = Visibility.Hidden;
+                }
 
+                tb_nombre_pac.Visibility = Visibility.Visible;
+                tb_apellido_pac.Visibility = Visibility.Visible;
+                tb_direccion_pac.Visibility = Visibility.Visible;
+                tb_ciudad_pac.Visibility = Visibility.Visible;
+                tb_telefono_pac.Visibility = Visibility.Visible;
+                tb_edad_pac.Visibility = Visibility.Visible;
+                tb_email_pac.Visibility = Visibility.Visible;
+
+                tb_nombre_pac.Text = ((Paciente)dgPacientes.SelectedItem).Nombre;
+                tb_apellido_pac.Text = ((Paciente)dgPacientes.SelectedItem).Apellidos;
+                tb_direccion_pac.Text = ((Paciente)dgPacientes.SelectedItem).Direccion;
+                tb_ciudad_pac.Text = ((Paciente)dgPacientes.SelectedItem).Ciudad;
+                tb_telefono_pac.Text = ((Paciente)dgPacientes.SelectedItem).Telefono.ToString();
+                tb_edad_pac.Text = ((Paciente)dgPacientes.SelectedItem).Edad.ToString();
+                tb_email_pac.Text = ((Paciente)dgPacientes.SelectedItem).Email;
+
+                btn_cancelar_modificar_pac.Visibility = Visibility.Visible;
+                btn_confirmar_modificar_pac.Visibility=Visibility.Visible;
+                
+            }
         }
 
         private void btn_anadir_pac_Click(object sender, RoutedEventArgs e)
+        {
+            tb_nombre_pac.Visibility = Visibility.Visible;
+            tb_apellido_pac.Visibility = Visibility.Visible;
+            tb_direccion_pac.Visibility = Visibility.Visible;
+            tb_ciudad_pac.Visibility = Visibility.Visible;
+            tb_telefono_pac.Visibility = Visibility.Visible;
+            tb_edad_pac.Visibility = Visibility.Visible;
+            tb_email_pac.Visibility = Visibility.Visible;
+
+            btn_cancelar_anadir_pac.Visibility = Visibility.Visible;
+            btn_confirmar_anadir_pac.Visibility = Visibility.Visible;
+        }
+
+        private void dgPacientes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dgPacientes.SelectedItems.Count == 0)
+            {
+                btn_anadir_pac.IsEnabled = true;
+                btn_eliminar_pac.IsEnabled = false;
+                btn_modificar_pac.IsEnabled = false;
+            }
+            else if (dgPacientes.SelectedItems.Count == 1)
+            {
+                btn_anadir_pac.IsEnabled = false;
+                btn_eliminar_pac.IsEnabled = true;
+                btn_modificar_pac.IsEnabled = true;
+            }
+            else // Mas de un elemento seleccionado
+            {
+                btn_anadir_pac.IsEnabled = false;
+                btn_eliminar_pac.IsEnabled = true;
+                btn_modificar_pac.IsEnabled = false;
+            }
+        }
+
+        private void btn_cancelar_exc_Click(object sender, RoutedEventArgs e)
+        {
+            tb_nombre_pac.Visibility = Visibility.Hidden;
+            tb_apellido_pac.Visibility = Visibility.Hidden;
+            tb_direccion_pac.Visibility = Visibility.Hidden;
+            tb_ciudad_pac.Visibility = Visibility.Hidden;
+            tb_telefono_pac.Visibility = Visibility.Hidden;
+            tb_edad_pac.Visibility = Visibility.Hidden;
+            tb_email_pac.Visibility = Visibility.Hidden;
+
+            btn_anadir_pac.IsEnabled = true;
+            btn_modificar_pac.IsEnabled = false;
+            btn_eliminar_pac.IsEnabled = false;
+
+            foreach (var column in dgPacientes.Columns)
+            {
+                column.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void btn_confirmar_anadir_pac_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_cancelar_anadir_pac_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_confirmar_modificar_pac_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_cancelar_modificar_pac_Click(object sender, RoutedEventArgs e)
         {
 
         }
