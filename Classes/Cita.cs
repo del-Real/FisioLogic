@@ -17,13 +17,13 @@ public class Cita
     public int Duracion { set; get; }
     public string Informacion { set; get; }
 
-    public Cita(int id, int dia, string hora, int mes, int year, string paciente, string profesional, int duracion, string informacion)
+    public Cita(int id, int dia, int mes, int year, string hora, string paciente, string profesional, int duracion, string informacion)
     {
         IdCita = id;
         Dia = dia;
-        Hora = hora;
         Mes = mes;
         Year = year;
+        Hora = hora;
         Paciente = paciente;
         Profesional = profesional;
         Duracion = duracion;

@@ -48,8 +48,8 @@ namespace FisioLogicV2.Pages
         private List<Paciente> CargarContenidoXML()
         {   
             List<Paciente> listado = new List<Paciente>();
-            string rutaFoto = "FisioLogic\\Assets\\m_user.png";
-            Uri uriImagen = new Uri(rutaFoto, UriKind.RelativeOrAbsolute);
+            string rutaFoto = "assets/m_user.png";
+            Uri uriImagen = new Uri(rutaFoto, UriKind.Relative);
             listado.Add(new Paciente(0, "Pedro", "García López", "Calle Manzana, 103", "Manzanares", 123456789, 40, "Masculino", uriImagen, "pedro@example.com"));
             listado.Add(new Paciente(1, "María", "Martínez Gómez", "Avenida Principal, 45", "Granada", 987654321, 35, "Femenino", uriImagen, "maria@example.com"));
             listado.Add(new Paciente(2, "Juan", "López González", "Carrera 245, Portal A", "Valdepeñas", 567890123, 50, "Masculino", uriImagen, "juan@example.com"));
@@ -62,20 +62,6 @@ namespace FisioLogicV2.Pages
             listado.Add(new Paciente(9, "Elena", "Rodríguez Fernández", "Calle Neotica, 4", "Ciudad Real", 890123456, 25, "Femenino", uriImagen, "elena@example.com"));
             listado.Add(new Paciente(10, "Luis", "Fernández Pérez", "Calle Princesa, 9", "Valdepeñas", 901234567, 37, "Masculino", uriImagen, "luis@example.com"));
             listado.Add(new Paciente(11, "Lucía", "García Martínez", "Calle de la Mesta, 44", "Granada", 678901234, 45, "Femenino", uriImagen, "lucia@example.com"));
-            /*
-            // Cargar contenido de prueba
-            
-            XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Datos/Pacientes.xml", UriKind.Relative));
-            doc.Load(fichero.Stream);
-            foreach (XmlNode node in doc.DocumentElement.ChildNodes)
-            {
-                var nuevoPaciente = new Paciente();
-                nuevoPaciente.IdPaciente = Convert.ToInt32(node.Attributes["IdPaciente"].Value);
-                nuevoPaciente.Nombre = node.Attributes["Nombre"].Value;
-                nuevoPaciente.Apellidos = node.Attributes["Apellidos"].Value;
-      
-            }*/
 
             return listado;
             

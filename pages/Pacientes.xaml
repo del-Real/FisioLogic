@@ -51,7 +51,6 @@
                 <Label Content="Telefono" Grid.Row="5" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
                 <Label Content="Edad" Grid.Row="6" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
                 <Label Content="Email" Grid.Row="7" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
-                <Image x:Name="foto_pac" Grid.Column="2" Margin="2,8,4,2" Grid.RowSpan="3" Source="{Binding SelectedItem.Foto, ElementName=dgPacientes}"/>
                 <TextBlock x:Name="nombre_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Nombre}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
                 <TextBlock x:Name="apellidos_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Apellidos}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
                 <TextBlock x:Name="direccion_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Direccion}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
@@ -66,6 +65,7 @@
                 <TextBox x:Name="tb_telefono_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="5" Visibility="Hidden" Height="23"/>
                 <TextBox x:Name="tb_edad_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="6" Visibility="Hidden" Height="23"/>
                 <TextBox x:Name="tb_email_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="7" Visibility="Hidden" Height="23"/>
+                <Image x:Name="foto_pac" Grid.Column="2" Margin="2,8,4,2" Grid.RowSpan="3" Source="{Binding SelectedItem.Foto, ElementName=dgPacientes}"/>
             </Grid>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Margin="140,805,500,25" Width="500">

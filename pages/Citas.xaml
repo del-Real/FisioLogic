@@ -16,11 +16,12 @@
           AutoGenerateColumns="False" SelectionChanged="dgCitas_SelectionChanged"> 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding IdCita}" Width="30" />
-                <DataGridTextColumn Header="Hora" Binding="{Binding Hora}" Width="50" />
-                <DataGridTextColumn Header="Paciente" Binding="{Binding Paciente}" Width="65"/>
-                <DataGridTextColumn Header="Especialista" Binding="{Binding Profesional}" Width="85"/>
-                <DataGridTextColumn Header="Duracion" Binding="{Binding Duracion}" Width="80" />
-                <DataGridTextColumn Header="Informacion" Binding="{Binding Informacion}" Width="80" />
+                <DataGridTextColumn Header="Dia" Binding="{Binding Dia}" Width="30" />
+                <DataGridTextColumn Header="Hora" Binding="{Binding Hora}" Width="40" />
+                <DataGridTextColumn Header="Paciente" Binding="{Binding Paciente}" Width="110"/>
+                <DataGridTextColumn Header="Especialista" Binding="{Binding Profesional}" Width="90"/>
+                <DataGridTextColumn Header="Duracion" Binding="{Binding Duracion}" Width="35" />
+                <DataGridTextColumn Header="Informacion" Binding="{Binding Informacion}" Width="150" />
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="btnanadirCita" Content="Añadir Cita" FontSize="16" HorizontalAlignment="Left" Margin="730,753,0,75" Width="129" Click="addCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
@@ -32,7 +33,7 @@
         <Button x:Name="btnborrarCita" Content="Eliminar Cita"  FontSize="16" HorizontalAlignment="Left" Margin="1022,753,0,75" Width="127" Click="deleteCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
         <Image Source="/Assets/removeButton.png" Margin="1026,757,196,80"/>
         <Viewbox Margin="25,97,525,106">
-            <Calendar Height="168" Width="187" BorderBrush="#32e2d0" SelectedDatesChanged="SelectedDateChanged" />
+            <Calendar x:Name="dpFecha" Height="168" Width="187" BorderBrush="#32e2d0" SelectedDatesChanged="SelectedDateChanged" />
         </Viewbox>
         <TextBox x:Name="tbDuracion" HorizontalAlignment="Left" Margin="1079,596,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="35"/>
         <Label Content="Duración" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="1079,573,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" Height="23"/>
