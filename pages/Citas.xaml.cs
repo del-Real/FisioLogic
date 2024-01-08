@@ -44,6 +44,12 @@ namespace FisioLogic.pages
             string informacion = tbInformacion.Text;
             int duracion = 0;
 
+            if (string.IsNullOrWhiteSpace(paciente) || string.IsNullOrWhiteSpace(profesional))
+            {
+                MessageBox.Show("Por favor, completa los campos obligatorios.");
+                return;
+            }
+
             if (dpFecha.SelectedDate.HasValue)
             {
                 DateTime selectedDate = dpFecha.SelectedDate.Value;
@@ -92,6 +98,7 @@ namespace FisioLogic.pages
                 MessageBox.Show("Por favor, selecciona una fecha");
             }
         }
+
         private void modifyCita(object sender, RoutedEventArgs e)
         {
             if (dgCitas.SelectedItem is Cita selectedCita)
@@ -115,6 +122,12 @@ namespace FisioLogic.pages
                         return; // No modificamos la cita si la duración no es válida
                     }
 
+                    // Actualiza la hora solo si hay una selección en cbHora
+                    if (cbHora.SelectedItem is ComboBoxItem selectedHoraItem)
+                    {
+                        selectedCita.Hora = (string)selectedHoraItem.Content;
+                    }
+
                     // Actualiza el DataGrid después de modificar la cita
                     dgCitas.Items.Refresh();
 
@@ -123,6 +136,7 @@ namespace FisioLogic.pages
                     tbProfesional.Clear();
                     tbInformacion.Clear();
                     tbDuracion.Clear();
+                    cbHora.SelectedIndex = -1; // Desselecciona la hora en el ComboBox
                 }
             }
         }
