@@ -12,7 +12,6 @@
         <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10"/>
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800"/>
         <Label Content="Citas" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="35" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbInfo" Content="Para reactivar AÑADIR CITA, limpie los campos primero" Margin="337,801,534,28" FontFamily="Leelawadee" FontSize="15" Visibility="Hidden"/>
         <DataGrid x:Name="dgCitas" Margin="40,100,562,92" AlternatingRowBackground="#d6f9f6" AutoGenerateColumns="False" SelectionChanged="dgCitas_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding IdCita}" Width="30" />
@@ -63,6 +62,7 @@
         </Grid>
 
         <Grid>
+            <Label x:Name="lbInfo" Content="Para reactivar AÑADIR CITA, limpie los campos primero" Margin="337,801,534,28" FontFamily="Leelawadee" FontSize="15" Visibility="Hidden"/>
             <Button x:Name="btnanadirCita" Content="Añadir Cita" FontSize="16" HorizontalAlignment="Left" Margin="730,797,0,31" Width="129" Click="addCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
             <Image Source="/Assets/addButton.png" Margin="735,801,492,34"/>
 

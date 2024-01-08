@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,12 +15,12 @@ namespace FisioLogicV2.Classes
         public int Mes { set; get; }
         public int Year { set; get; }
         public string fecha { set; get; }
-        public Paciente paciente { set; get; }
+        public string paciente { set; get; }
         public int telefono { set; get; }
         public string especialidad { set; get; }
-        public Profesional profesional { set; get;}
+        public string profesional { set; get;}
 
-        public Historial(int idHistorial, int dia, string hora, int mes, int year, Paciente paciente, int telefono, string especialidad, Profesional profesional)
+        public Historial(int idHistorial, int dia, int mes, int year, string hora, string paciente, int telefono, string especialidad, string profesional)
         {
             this.idHistorial = idHistorial;
             Dia = dia;

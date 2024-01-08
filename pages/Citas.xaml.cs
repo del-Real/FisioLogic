@@ -129,17 +129,30 @@ namespace FisioLogic.pages
 
         private void deleteCita(object sender, RoutedEventArgs e)
         {
-            if (dgCitas.SelectedItem is Cita selectedCita)
+            // Obtener una lista de citas seleccionadas
+            List<Cita> citasSeleccionadas = new List<Cita>();
+            foreach (var selectedItem in dgCitas.SelectedItems)
             {
-                MessageBoxResult result = MessageBox.Show("¿Desea eliminar esta cita?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (selectedItem is Cita selectedCita)
+                {
+                    citasSeleccionadas.Add(selectedCita);
+                }
+            }
+
+            if (citasSeleccionadas.Count > 0)
+            {
+                MessageBoxResult result = MessageBox.Show("¿Desea eliminar las citas seleccionadas?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
                 if (result == MessageBoxResult.Yes)
                 {
-                    CitasCollection.Remove(selectedCita);
+                    // Eliminar las citas seleccionadas
+                    foreach (var cita in citasSeleccionadas)
+                    {
+                        CitasCollection.Remove(cita);
+                    }
                 }
             }
         }
-
 
         private void dgCitas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -161,6 +174,20 @@ namespace FisioLogic.pages
                 btnanadirCita.IsEnabled = true;
                 lbInfo.Visibility = Visibility.Hidden;
             }
+
+            if (dgCitas.SelectedItems.Count == 1)
+            {
+                 btneditarCita.IsEnabled = true;
+            }
+            else if (dgCitas.SelectedItems.Count > 1)
+            {
+                btneditarCita.IsEnabled = false;
+            }
+            else
+            {
+                btneditarCita.IsEnabled = false;
+            }
+
         }
         private void SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
