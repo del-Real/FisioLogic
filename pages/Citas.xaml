@@ -12,37 +12,36 @@
         <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10"/>
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800"/>
         <Label Content="Citas" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="35" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
-        <DataGrid x:Name="dgCitas" Margin="730,125,101,378" 
-          AutoGenerateColumns="False" SelectionChanged="dgCitas_SelectionChanged"> 
+        <Label x:Name="lbInfo" Content="Para reactivar AÑADIR CITA, limpie los campos primero" Margin="337,801,534,28" FontFamily="Leelawadee" FontSize="15" Visibility="Hidden"/>
+        <DataGrid x:Name="dgCitas" Margin="40,100,562,92" AlternatingRowBackground="#d6f9f6" AutoGenerateColumns="False" SelectionChanged="dgCitas_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding IdCita}" Width="30" />
-                <DataGridTextColumn Header="Dia" Binding="{Binding Dia}" Width="30" />
+                <DataGridTextColumn Header="Día" Binding="{Binding Dia}" Width="30" />
+                <DataGridTextColumn Header="Mes" Binding="{Binding Mes}" Width="35" />
+                <DataGridTextColumn Header="Año" Binding="{Binding Year}" Width="40" />
                 <DataGridTextColumn Header="Hora" Binding="{Binding Hora}" Width="40" />
-                <DataGridTextColumn Header="Paciente" Binding="{Binding Paciente}" Width="110"/>
-                <DataGridTextColumn Header="Especialista" Binding="{Binding Profesional}" Width="90"/>
-                <DataGridTextColumn Header="Duracion" Binding="{Binding Duracion}" Width="35" />
-                <DataGridTextColumn Header="Informacion" Binding="{Binding Informacion}" Width="150" />
+                <DataGridTextColumn Header="Paciente" Binding="{Binding Paciente}" Width="160"/>
+                <DataGridTextColumn Header="Especialista" Binding="{Binding Profesional}" Width="110"/>
+                <DataGridTextColumn Header="Duracion" Binding="{Binding Duracion}" Width="65" />
+                <DataGridTextColumn Header="Informacion" Binding="{Binding Informacion}" Width="250" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnanadirCita" Content="Añadir Cita" FontSize="16" HorizontalAlignment="Left" Margin="730,753,0,75" Width="129" Click="addCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
-        <Image Source="/Assets/addButton.png" Margin="735,757,492,78"/>
-
-        <Button x:Name="btneditarCita" Content="Modificar Cita" FontSize="16" HorizontalAlignment="Left" Margin="872,753,0,75" Width="139" Click="modifyCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
-        <Image Source="/Assets/edit.png" Margin="878,759,348,82"/>
-
-        <Button x:Name="btnborrarCita" Content="Eliminar Cita"  FontSize="16" HorizontalAlignment="Left" Margin="1022,753,0,75" Width="127" Click="deleteCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
-        <Image Source="/Assets/removeButton.png" Margin="1026,757,196,80"/>
-        <Viewbox Margin="25,97,525,106">
-            <Calendar x:Name="dpFecha" Height="168" Width="187" BorderBrush="#32e2d0" SelectedDatesChanged="SelectedDateChanged" />
+        <Label Content="Fecha" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="731,393,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" Width="63"/>
+        <Viewbox Margin="698,411,94,92">
+            <Calendar x:Name="dpFecha" Height="166" Width="194" BorderBrush="#abadb3" SelectedDatesChanged="SelectedDateChanged" Language="es-ES" />
         </Viewbox>
-        <TextBox x:Name="tbDuracion" HorizontalAlignment="Left" Margin="1079,596,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="35"/>
-        <Label Content="Duración" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="1079,573,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" Height="23"/>
-        <TextBox x:Name="tbPaciente" HorizontalAlignment="Left" Margin="730,529,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Height="31"/>
-        <Label Content="Paciente" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="730,506,0,0" VerticalAlignment="Top" Width="79" FontFamily="Leelawadee"/>
-        <TextBox x:Name="tbProfesional" HorizontalAlignment="Left" Margin="730,596,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Height="35"/>
-        <Label Content="Profesional" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="730,571,0,0" VerticalAlignment="Top" FontFamily="Leelawadee"/>
-        <ComboBox x:Name="cbHora" HorizontalAlignment="Left" Margin="1079,529,0,0" VerticalAlignment="Top" Width="70" Height="31">
-            <ComboBox.Items>
+
+        <Grid>
+            <Button x:Name="btnlimpiar" Content="Limpiar campos" FontSize="16" HorizontalAlignment="Left" Margin="731,346,0,482" Width="418" Click="clean" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+            <TextBox x:Name="tbDuracion" HorizontalAlignment="Left" Margin="1079,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="35"/>
+            <Label Content="Duración" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="1079,165,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" Height="23"/>
+            <TextBox x:Name="tbPaciente" HorizontalAlignment="Left" Margin="730,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Height="34"/>
+            <Label Content="Paciente" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="731,98,0,0" VerticalAlignment="Top" Width="76" FontFamily="Leelawadee"/>
+            <TextBox x:Name="tbProfesional" HorizontalAlignment="Left" Margin="730,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Height="35"/>
+            <Label Content="Profesional" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="731,163,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" Width="83"/>
+
+
+            <ComboBox x:Name="cbHora" HorizontalAlignment="Left" Margin="1079,121,0,0" VerticalAlignment="Top" Width="70" Height="34">
                 <ComboBoxItem Content="9.00"/>
                 <ComboBoxItem Content="9.30"/>
                 <ComboBoxItem Content="10.00"/>
@@ -54,12 +53,27 @@
                 <ComboBoxItem Content="13.00"/>
                 <ComboBoxItem Content="13.30"/>
                 <ComboBoxItem Content="14.00"/>
-            </ComboBox.Items>
-        </ComboBox>
-        <Label Content="Hora" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="1079,506,0,0" VerticalAlignment="Top" Height="27" FontFamily="Leelawadee" Width="48"/>
-        <TextBox x:Name="tbInformacion" HorizontalAlignment="Left" Margin="730,664,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="419" Height="66"/>
-        <Label Content="Información" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="730,641,0,0" VerticalAlignment="Top" FontFamily="Leelawadee"/>
-        <Label Content="(Opcional)" FontSize="9" HorizontalAlignment="Left" Margin="823,642,0,0" VerticalAlignment="Top"/>
+            </ComboBox>
+            <Label Content="Hora" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="1079,98,0,0" VerticalAlignment="Top" Height="27" FontFamily="Leelawadee" Width="48"/>
+            <TextBox x:Name="tbInformacion" HorizontalAlignment="Left" Margin="730,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="419" Height="74"/>
+            <Label Content="Información" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="731,233,0,0" VerticalAlignment="Top" FontFamily="Leelawadee"/>
+            <Label Content="(Opcional)" FontSize="9" HorizontalAlignment="Left" Margin="820,235,0,0" VerticalAlignment="Top" Height="23"/>
+
+
+        </Grid>
+
+        <Grid>
+            <Button x:Name="btnanadirCita" Content="Añadir Cita" FontSize="16" HorizontalAlignment="Left" Margin="730,797,0,31" Width="129" Click="addCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+            <Image Source="/Assets/addButton.png" Margin="735,801,492,34"/>
+
+            <Button x:Name="btneditarCita" Content="Modificar Cita" FontSize="16" HorizontalAlignment="Left" Margin="871,797,0,31" Width="139" Click="modifyCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+            <Image Source="/Assets/edit.png" Margin="877,803,349,38"/>
+
+            <Button x:Name="btnborrarCita" Content="Eliminar Cita"  FontSize="16" HorizontalAlignment="Left" Margin="1022,797,0,31" Width="127" Click="deleteCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+            <Image Source="/Assets/removeButton.png" Margin="1026,801,196,36"/>
+
+
+        </Grid>
 
     </Grid>
 </Page>

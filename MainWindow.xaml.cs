@@ -46,13 +46,18 @@ namespace FisioLogicV2
         // Cierre sesión
         private void closeSession(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult result = MessageBox.Show("¿Desea cerrar la sesión?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-            LoginScreen loginScreen = new LoginScreen();
-            loginScreen.Show();
+            if (result == MessageBoxResult.Yes)
+            {
+                LoginScreen loginScreen = new LoginScreen();
+                loginScreen.Show();
 
-            // cierre mainWindow
-            this.Close();
+                // Cierre de la ventana actual (MainWindow)
+                this.Close();
+            }
         }
+
 
         // Ventana ayuda
         private void help(object sender, RoutedEventArgs e)

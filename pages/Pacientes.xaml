@@ -12,7 +12,7 @@
         <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10"/>
 
 
-        <DataGrid x:Name="dgPacientes" Margin="20,75,384,70" AlternatingRowBackground="LightBlue" AlternationCount="2"
+        <DataGrid x:Name="dgPacientes" Margin="42,99,384,70" AlternatingRowBackground="#d6f9f6" AlternationCount="2"
           AutoGenerateColumns="False" SelectionChanged="dgPacientes_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding IdPaciente}" Width="30"/>

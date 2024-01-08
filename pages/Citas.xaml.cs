@@ -32,22 +32,9 @@ namespace FisioLogic.pages
         {
             InitializeComponent();
       
-
             CitasCollection = new ObservableCollection<Cita>();
             CargarContenido();
             dgCitas.ItemsSource = CitasCollection;
- 
-        }
-
-        private void CargarContenido()
-        {
-            CitasCollection.Add(new Cita(1, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "9.00", "Pedro García López", "Lucía Ramirez", 30, "Presenta molestias en hombros y bajoespalda"));
-            CitasCollection.Add(new Cita(2, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "9.30", "María Martínez Gómez", "Pedro Anasagasti", 30, "Dolores punzantes"));
-            CitasCollection.Add(new Cita(3, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "10.00", "Lucía García Martínez", "Yolanda Ruán", 30, "Incapacidad de incorporarse totalmente"));
-            CitasCollection.Add(new Cita(4, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "11.00", "Ana González García", "Jaime Velasco", 60, "Ligera lesión cervical"));
-            CitasCollection.Add(new Cita(5, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "12.00", "Laura Rodríguez Fernández", "Yolanda Ruán", 30, "Hombros caídos"));
-            CitasCollection.Add(new Cita(6, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "12.30", "Javier Martínez López", "Jaime Velasco", 60, "Lumbago"));
-            CitasCollection.Add(new Cita(7, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "13.30", "Sofía Sánchez Romero", "Pedro Anasagasti", 30, "Revisión anual"));
         }
 
         private void addCita(object sender, RoutedEventArgs e)
@@ -61,12 +48,12 @@ namespace FisioLogic.pages
             {
                 DateTime selectedDate = dpFecha.SelectedDate.Value;
 
-                // Extract day, month, and year
+                // Dia | Mes | Año
                 int selectedDay = selectedDate.Day;
                 int selectedMonth = selectedDate.Month;
                 int selectedYear = selectedDate.Year;
 
-                // Get the selected hora from the ComboBox
+                // Devuelve hora
                 var item = (ComboBoxItem)cbHora.SelectedValue;
                 var hora = (string)item.Content;
 
@@ -93,7 +80,7 @@ namespace FisioLogic.pages
                     tbInformacion.Clear();
                     tbDuracion.Clear();
                     cbHora.SelectedIndex = -1;
-                    dpFecha.SelectedDate = null; // Clear the selected date in the DatePicker
+                    dpFecha.SelectedDate = null; // Limpiar fecha
                 }
                 else
                 {
@@ -109,29 +96,34 @@ namespace FisioLogic.pages
         {
             if (dgCitas.SelectedItem is Cita selectedCita)
             {
-                // Modificar los datos de la cita seleccionada con los valores de los TextBox y otros controles
-                selectedCita.Paciente = tbPaciente.Text;
-                selectedCita.Profesional = tbProfesional.Text;
-                selectedCita.Informacion = tbInformacion.Text;
+                MessageBoxResult result = MessageBox.Show("¿Desea aplicar la modificación?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-                if (int.TryParse(tbDuracion.Text, out int duracion))
+                if (result == MessageBoxResult.Yes)
                 {
-                    selectedCita.Duracion = duracion;
-                }
-                else
-                {
-                    MessageBox.Show("La duración debe ser un valor numérico válido");
-                    return; // No modificamos la cita si la duración no es válida
-                }
+                    // Modificar los datos de la cita seleccionada con los valores de los TextBox y otros controles
+                    selectedCita.Paciente = tbPaciente.Text;
+                    selectedCita.Profesional = tbProfesional.Text;
+                    selectedCita.Informacion = tbInformacion.Text;
 
-                // Actualiza el DataGrid después de modificar la cita
-                dgCitas.Items.Refresh();
+                    if (int.TryParse(tbDuracion.Text, out int duracion))
+                    {
+                        selectedCita.Duracion = duracion;
+                    }
+                    else
+                    {
+                        MessageBox.Show("La duración debe ser un valor numérico válido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return; // No modificamos la cita si la duración no es válida
+                    }
 
-                // Limpia los campos después de modificar
-                tbPaciente.Clear();
-                tbProfesional.Clear();
-                tbInformacion.Clear();
-                tbDuracion.Clear();
+                    // Actualiza el DataGrid después de modificar la cita
+                    dgCitas.Items.Refresh();
+
+                    // Limpia los campos después de modificar
+                    tbPaciente.Clear();
+                    tbProfesional.Clear();
+                    tbInformacion.Clear();
+                    tbDuracion.Clear();
+                }
             }
         }
 
@@ -139,37 +131,40 @@ namespace FisioLogic.pages
         {
             if (dgCitas.SelectedItem is Cita selectedCita)
             {
-                CitasCollection.Remove(selectedCita);
+                MessageBoxResult result = MessageBox.Show("¿Desea eliminar esta cita?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    CitasCollection.Remove(selectedCita);
+                }
             }
         }
+
+
         private void dgCitas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (dgCitas.SelectedItem is Cita selectedCita)
             {
-                // Recuperar información del datagrid a los campos
+                // Recupera información del datagrid a los campos
                 tbPaciente.Text = selectedCita.Paciente;
                 tbProfesional.Text = selectedCita.Profesional;
                 tbInformacion.Text = selectedCita.Informacion;
-                tbDuracion.Text = selectedCita.Duracion.ToString(); 
-                                                                  
+                tbDuracion.Text = selectedCita.Duracion.ToString();
+
+                // Deshabilitar el botón cuando hay un elemento seleccionado
+                btnanadirCita.IsEnabled = false;
+                lbInfo.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                // Habilitar el botón cuando no hay elementos seleccionados
+                btnanadirCita.IsEnabled = true;
+                lbInfo.Visibility = Visibility.Hidden;
             }
         }
         private void SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            //CitasCollection.Clear();
-
-            //DateTime fechaSeleccionada = dpFecha.SelectedDate.GetValueOrDefault();
-
-            //// Obtén la fecha actual
-            //DateTime fechaActual = DateTime.Now.Date;
-
-            //// Compara la fecha seleccionada con la fecha actual
-            //if (fechaSeleccionada == fechaActual)
-            //{
-            //    CargarContenido();
-            //    dgCitas.ItemsSource = CitasCollection;
-            //}
-
+    
         }
 
  
@@ -181,5 +176,26 @@ namespace FisioLogic.pages
                 e.Handled = true;
             }
         }
+        private void clean(object sender, RoutedEventArgs e)
+        {
+            tbPaciente.Clear();
+            tbProfesional.Clear();
+            tbInformacion.Clear();
+            tbDuracion.Clear();
+
+            // Reactiva botón añadir
+            btnanadirCita.IsEnabled = true;
+            lbInfo.Visibility = Visibility.Hidden;
+        }
+        private void CargarContenido()
+        {
+            CitasCollection.Add(new Cita(1, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "9.00", "Pedro García López", "Lucía Ramirez", 30, "Presenta molestias en hombros y bajoespalda"));
+            CitasCollection.Add(new Cita(2, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "9.30", "María Martínez Gómez", "Pedro Anasagasti", 30, "Dolores punzantes"));
+            CitasCollection.Add(new Cita(3, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "10.00", "Lucía García Martínez", "Yolanda Ruán", 30, "Incapacidad de incorporarse totalmente"));
+            CitasCollection.Add(new Cita(4, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "11.00", "Ana González García", "Jaime Velasco", 60, "Ligera lesión cervical"));
+            CitasCollection.Add(new Cita(5, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "12.00", "Laura Rodríguez Fernández", "Yolanda Ruán", 30, "Hombros caídos"));
+            CitasCollection.Add(new Cita(6, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "12.30", "Javier Martínez López", "Jaime Velasco", 60, "Lumbago"));
+            CitasCollection.Add(new Cita(7, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "13.30", "Sofía Sánchez Romero", "Pedro Anasagasti", 30, "Revisión anual"));
+        }   
     }
 }

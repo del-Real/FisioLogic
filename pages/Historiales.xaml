@@ -9,7 +9,9 @@
       Title="Historiales" Background="#32e2d0">
 
     <Grid>
-        <DataGrid x:Name="dgHistoriales" Margin="20,75,384,70" AlternatingRowBackground="LightBlue" AlternationCount="2"
+        <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10"/>
+
+        <DataGrid x:Name="dgHistoriales" Margin="41,96,384,70" AlternatingRowBackground="LightBlue" AlternationCount="2"
   AutoGenerateColumns="False" SelectionChanged="dgHistoriales_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding idHistorial}" Width="30"/>
