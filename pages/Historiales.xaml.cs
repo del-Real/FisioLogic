@@ -24,5 +24,10 @@ namespace FisioLogicV2.Pages
         {
             InitializeComponent();
         }
+
+        private void dgHistoriales_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

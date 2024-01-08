@@ -9,7 +9,19 @@
       Title="Historiales" Background="#32e2d0">
 
     <Grid>
-        <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10"/>
+        <DataGrid x:Name="dgHistoriales" Margin="20,75,384,70" AlternatingRowBackground="LightBlue" AlternationCount="2"
+  AutoGenerateColumns="False" SelectionChanged="dgHistoriales_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding idHistorial}" Width="30"/>
+                <DataGridTextColumn Header="Fecha" Binding="{Binding fecha}" Width="50"/>
+                <DataGridTextColumn Header="Hora" Binding="{Binding hora}" Width="50" />
+                <DataGridTextColumn Header="Apellidos Paciente" Binding="{Binding Paciente.Apellidos}" Width="200"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Paciente.Nombre}" Width="100"/>
+                <DataGridTextColumn Header="Especialidad" Binding="{Binding Profesional.Especialidad}" Width="110"/>
+                <DataGridTextColumn Header="Nombre Profesional" Binding="{Binding Profesional.Nombre}" Width="160" />
+
+            </DataGrid.Columns>
+        </DataGrid>
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800"/>
         <Label Content="Historiales" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" Height="35" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
 

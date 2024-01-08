@@ -32,7 +32,23 @@ namespace FisioLogicV2.Classes
             Foto = foto;
             Email = email;
         }
-        
+
+        public Paciente(int id, string nombre, string apellidos, string direccion, string ciudad, int telefono, int edad, string genero, string email)
+        {
+            string rutaFoto = "FisioLogic\\m_user.png";
+            Uri uriImagen = new Uri(rutaFoto, UriKind.RelativeOrAbsolute);
+            IdPaciente = id;
+            Nombre = nombre;
+            Apellidos = apellidos;
+            Direccion = direccion;
+            Ciudad = ciudad;
+            Telefono = telefono;
+            Edad = edad;
+            Genero = genero;
+            Foto = uriImagen;
+            Email = email;
+        }
+
     }
 }
 
