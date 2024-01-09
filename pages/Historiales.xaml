@@ -20,7 +20,7 @@
                 <DataGridTextColumn Header="Apellidos Paciente" Binding="{Binding paciente}" Width="120"/>
                 <DataGridTextColumn Header="Teléfono" Binding="{Binding telefono}" Width="100"/>
                 <DataGridTextColumn Header="Especialidad" Binding="{Binding especialidad}" Width="110"/>
-                <DataGridTextColumn Header="Nombre Profesional" Binding="{Binding profesional}" Width="270" />
+                <DataGridTextColumn Header="Profesional" Binding="{Binding profesional}" Width="270" />
 
             </DataGrid.Columns>
         </DataGrid>
@@ -31,32 +31,47 @@
         </Viewbox>
         <Grid>
             <Button x:Name="btnlimpiar" Content="Limpiar campos" FontSize="16" HorizontalAlignment="Left" Margin="731,368,0,461" Width="323" Click="clean" FontFamily="Leelawadee" Padding="25,1,1,1"/>
-            <TextBox x:Name="tbDuracion" HorizontalAlignment="Left" Margin="731,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323" Height="35"/>
+            <TextBox x:Name="tbTelefono" HorizontalAlignment="Left" Margin="731,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323" Height="35"/>
             <Label Content="Teléfono" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="731,159,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" Height="23"/>
             <TextBox x:Name="tbPaciente" HorizontalAlignment="Left" Margin="730,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Height="34"/>
             <Label Content="Apellidos Paciente" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="731,93,0,0" VerticalAlignment="Top" Width="138" FontFamily="Leelawadee"/>
             <TextBox x:Name="tbProfesional" HorizontalAlignment="Left" Margin="730,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Height="36"/>
             <Label Content="Profesional" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="731,293,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" Width="83"/>
-            <TextBox x:Name="tbInformacion" HorizontalAlignment="Left" Margin="730,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Height="36" TextChanged="tbInformacion_TextChanged"/>
+            <TextBox x:Name="tbEspecialidad" HorizontalAlignment="Left" Margin="730,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Height="36" TextChanged="tbInformacion_TextChanged"/>
             <Label Content="Especialidad" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="731,224,0,0" VerticalAlignment="Top" FontFamily="Leelawadee"/>
 
             <Label Content="Fecha" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="731,0,0,0" VerticalAlignment="Center" FontFamily="Leelawadee" Width="63"/>
+            <Label Content="Hora" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="1102,93,0,0" VerticalAlignment="Top" Width="138" FontFamily="Leelawadee"/>
 
 
 
 
         </Grid>
         <Grid>
-            <Button x:Name="btnanadirHistorial" Content="Añadir Historial" FontSize="16" HorizontalAlignment="Left" Margin="704,797,0,31" Width="158" Click="addCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+            <Button x:Name="btnanadirHistorial" Content="Añadir historial" FontSize="16" HorizontalAlignment="Left" Margin="704,797,0,31" Width="158" Click="addHistorial" FontFamily="Leelawadee" Padding="25,1,1,1"/>
             <Image Source="/Assets/addButton.png" Margin="709,801,518,34"/>
 
-            <Button x:Name="btneditarHistorial" Content="Modificar Historial" FontSize="16" HorizontalAlignment="Left" Margin="876,797,0,31" Width="173" Click="modifyCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+            <Button x:Name="btneditarHistorial" Content="Modificar historial" FontSize="16" HorizontalAlignment="Left" Margin="876,797,0,31" Width="173" Click="modifyHistorial" FontFamily="Leelawadee" Padding="25,1,1,1"/>
             <Image Source="/Assets/edit.png" Margin="882,803,344,38"/>
 
-            <Button x:Name="btnborrarHistorial" Content="Eliminar Historial"  FontSize="16" HorizontalAlignment="Left" Margin="1062,797,0,31" Width="162" Click="deleteCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+            <Button x:Name="btnborrarHistorial" Content="Eliminar historial"  FontSize="16" HorizontalAlignment="Left" Margin="1062,797,0,31" Width="162" Click="deleteHistorial" FontFamily="Leelawadee" Padding="25,1,1,1"/>
             <Image Source="/Assets/removeButton.png" Margin="1066,801,156,36"/>
 
 
         </Grid>
+        <ComboBox x:Name="cbHora" HorizontalAlignment="Left" Margin="1105,116,0,0" VerticalAlignment="Top" Width="70" Height="34">
+            <ComboBoxItem Content="9.00"/>
+            <ComboBoxItem Content="9.30"/>
+            <ComboBoxItem Content="10.00"/>
+            <ComboBoxItem Content="10.30"/>
+            <ComboBoxItem Content="11.00"/>
+            <ComboBoxItem Content="11.30"/>
+            <ComboBoxItem Content="12.00"/>
+            <ComboBoxItem Content="12.30"/>
+            <ComboBoxItem Content="13.00"/>
+            <ComboBoxItem Content="13.30"/>
+            <ComboBoxItem Content="14.00"/>
+        </ComboBox>
+        <Label x:Name="lbInfo" Content="Para reactivar AÑADIR HISTORIAL, limpie los campos primero" Margin="261,801,568,28" FontFamily="Leelawadee" FontSize="15" Visibility="Hidden"/>
     </Grid>
 </Page>

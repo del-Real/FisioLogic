@@ -230,13 +230,13 @@ namespace FisioLogic.pages
         }
         private void CargarContenido()
         {
-            CitasCollection.Add(new Cita(1, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "9.00", "Pedro García López", "Lucía Ramirez", 30, "Presenta molestias en hombros y bajoespalda"));
-            CitasCollection.Add(new Cita(2, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "9.30", "María Martínez Gómez", "Pedro Anasagasti", 30, "Dolores punzantes"));
-            CitasCollection.Add(new Cita(3, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "10.00", "Lucía García Martínez", "Yolanda Ruán", 30, "Incapacidad de incorporarse totalmente"));
-            CitasCollection.Add(new Cita(4, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "11.00", "Ana González García", "Jaime Velasco", 60, "Ligera lesión cervical"));
-            CitasCollection.Add(new Cita(5, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "12.00", "Laura Rodríguez Fernández", "Yolanda Ruán", 30, "Hombros caídos"));
-            CitasCollection.Add(new Cita(6, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "12.30", "Javier Martínez López", "Jaime Velasco", 60, "Lumbago"));
-            CitasCollection.Add(new Cita(7, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "13.30", "Sofía Sánchez Romero", "Pedro Anasagasti", 30, "Revisión anual"));
+            CitasCollection.Add(new Cita(1, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "9.00", "Pedro García López", "Jesus López Velasco", 30, "Presenta molestias en hombros y bajoespalda"));
+            CitasCollection.Add(new Cita(2, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "9.30", "María Martínez Gómez", "Carlos Díaz Alonso", 30, "Dolores punzantes"));
+            CitasCollection.Add(new Cita(3, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "10.00", "Lucía García Martínez", "Amanda Martínez López", 30, "Incapacidad de incorporarse totalmente"));
+            CitasCollection.Add(new Cita(4, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "11.00", "Ana González García", "Óscar Rodríguez de la Torre", 60, "Ligera lesión cervical"));
+            CitasCollection.Add(new Cita(5, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "12.00", "Laura Rodríguez Fernández", "Óscar Rodríguez de la Torre", 30, "Hombros caídos"));
+            CitasCollection.Add(new Cita(6, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "12.30", "Javier Martínez López", "Amanda Martínez López", 60, "Lumbago"));
+            CitasCollection.Add(new Cita(7, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, "13.30", "Sofía Sánchez Romero", "Carlos Díaz Alonso", 30, "Revisión anual"));
         }   
     }
 }

@@ -17,6 +17,7 @@
     <None Remove="Assets\eliminar.png" />
     <None Remove="Assets\Femenino.PNG" />
     <None Remove="Assets\FisioLogic_positive_OG.png" />
+    <None Remove="Assets\FisioLogic_symbol.png" />
     <None Remove="Assets\help.png" />
     <None Remove="Assets\Masculino.PNG" />
     <None Remove="Assets\mostrarPass.png" />
@@ -41,6 +42,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\FisioLogic_positive_OG.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\FisioLogic_symbol.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\help.png">

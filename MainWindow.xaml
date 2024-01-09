@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FisioLogicV2"
+        Icon="./Assets/FisioLogic_symbol.png"
         mc:Ignorable="d"
         Title="Fisiologic" Background="#FF32E2D0" Width="1525" Height="925" WindowStartupLocation="CenterScreen" MinWidth="1500" MinHeight="900">
     <Grid>

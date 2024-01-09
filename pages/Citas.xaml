@@ -63,13 +63,13 @@
 
         <Grid>
             <Label x:Name="lbInfo" Content="Para reactivar AÑADIR CITA, limpie los campos primero" Margin="337,801,534,28" FontFamily="Leelawadee" FontSize="15" Visibility="Hidden"/>
-            <Button x:Name="btnanadirCita" Content="Añadir Cita" FontSize="16" HorizontalAlignment="Left" Margin="730,797,0,31" Width="129" Click="addCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+            <Button x:Name="btnanadirCita" Content="Añadir cita" FontSize="16" HorizontalAlignment="Left" Margin="730,797,0,31" Width="129" Click="addCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
             <Image Source="/Assets/addButton.png" Margin="735,801,492,34"/>
 
-            <Button x:Name="btneditarCita" Content="Modificar Cita" FontSize="16" HorizontalAlignment="Left" Margin="871,797,0,31" Width="139" Click="modifyCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+            <Button x:Name="btneditarCita" Content="Modificar cita" FontSize="16" HorizontalAlignment="Left" Margin="871,797,0,31" Width="139" Click="modifyCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
             <Image Source="/Assets/edit.png" Margin="877,803,349,38"/>
 
-            <Button x:Name="btnborrarCita" Content="Eliminar Cita"  FontSize="16" HorizontalAlignment="Left" Margin="1022,797,0,31" Width="127" Click="deleteCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
+            <Button x:Name="btnborrarCita" Content="Eliminar cita"  FontSize="16" HorizontalAlignment="Left" Margin="1022,797,0,31" Width="127" Click="deleteCita" FontFamily="Leelawadee" Padding="25,1,1,1"/>
             <Image Source="/Assets/removeButton.png" Margin="1026,801,196,36"/>
 
 
