@@ -17,4 +17,10 @@ public class Sanitario : Profesional
     {
         Especialidad = especialidad;
     }
+
+    public Sanitario(int id, string nombre, string apellidos, int edad, int telefono, string especialidad)
+        : base(id, nombre, apellidos, edad, telefono)
+    {
+        Especialidad = especialidad;
+    }
 }

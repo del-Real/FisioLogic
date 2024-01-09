@@ -16,8 +16,9 @@ public class Profesional
     public int Telefono { set; get; }
 
     public List<int> Fechas = new List<int>();
+    private int id;
 
-     public Profesional(int id, string nombre, string apellidos, int edad, Uri foto, int telefono)
+    public Profesional(int id, string nombre, string apellidos, int edad, Uri foto, int telefono)
     {
         IdProfesional = id;
         Nombre = nombre;
@@ -25,6 +26,19 @@ public class Profesional
         nombrecompleto = nombre + " " + apellidos;
         Edad = edad;
         Foto = foto;
+        Telefono = telefono;
+    }
+
+    public Profesional(int id, string nombre, string apellidos, int edad, int telefono)
+    {
+        string rutaFoto = "FisioLogic\\m_user.png";
+        Uri uriImagen = new Uri(rutaFoto, UriKind.RelativeOrAbsolute);
+        this.id = id;
+        Nombre = nombre;
+        Apellidos = apellidos;
+        nombrecompleto = nombre + " " + apellidos;
+        Edad = edad;
+        Foto = uriImagen;
         Telefono = telefono;
     }
 }

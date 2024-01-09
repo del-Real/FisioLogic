@@ -24,13 +24,13 @@ namespace FisioLogicV2.Pages
     /// 
     public partial class Personal : Page
     {
-        List<Profesional> listaSanitarios;
+        List<Sanitario> listaSanitarios;
         List<Profesional> listaLimpiadores;
         public Personal()
         {
             InitializeComponent();
 
-            listaSanitarios = new List<Profesional>();
+            listaSanitarios = new List<Sanitario>();
             listaLimpiadores = new List<Profesional>();
             listaSanitarios = CargarContenidoXMLSanitarios();
             listaLimpiadores = CargarContenidoXMLLimpiadores();
@@ -39,9 +39,9 @@ namespace FisioLogicV2.Pages
             lstLimpiadores.ItemsSource = listaLimpiadores;
 
         }
-        private List<Profesional> CargarContenidoXMLSanitarios()  //Nos seguia sin funcionar el metodo de cargar los datos del XML, como
+        private List<Sanitario> CargarContenidoXMLSanitarios()  //Nos seguia sin funcionar el metodo de cargar los datos del XML, como
         {                         //viste en la segunda defensa de la practica hemos optado por cargar asi algunos datos 
-            List<Profesional> listado = new List<Profesional>();
+            List<Sanitario> listado = new List<Sanitario>();
 
             string rutaFoto0 = "FisioLogic\\fotosPacientes\\pedrogarcia.jpg";
             string rutaFoto1 = "FisioLogic\\fotosPacientes\\mariamartinez.jpg";
@@ -76,23 +76,85 @@ namespace FisioLogicV2.Pages
             return listado;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void lstSanitarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-          
-            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            FichaPersonal fichaPersonal = new FichaPersonal();
-            mainWindow.mainFrame.Content = fichaPersonal;
+            if (lstSanitarios.Items.Count > 0)
+            {
+                visibilidad_botones_sanitarios(false, true, true);
+            }
+        }
 
+        private void lstLimpiadores_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (lstLimpiadores.Items.Count > 0)
+            {
+                visibilidad_botones_limpiadores(false, true, true);
+            }
         }
 
         private void btn_anadir_san_Click(object sender, RoutedEventArgs e)
         {
+            visibilidad_botones_sanitarios(false, false, false);
+            btn_cancelar_anadir_san.Visibility = Visibility.Visible;
+            btn_confirmar_anadir_san.Visibility= Visibility.Visible;
+            activar_textboxes();
+        }
 
+        private void btn_cancelar_anadir_san_Click(object sender, RoutedEventArgs e)
+        {
+            cancelar_mod_anadir_san();
+        }
+
+        private void btn_confirmar_anadir_san_Click(object sender, RoutedEventArgs e)
+        {
+            int[] comprobar = ComprobarCampos();
+            if (comprobar[0] == 0 && comprobar[1] == 0 && comprobar[2] == 0 && comprobar[3] == 0 && comprobar[4] == 0)
+            {
+                int id = listaSanitarios.Count + 1;
+                listaSanitarios.Add(new Sanitario(id, tb_nombre_san.Text, tb_apellido_san.Text, int.Parse(tb_telefono_san.Text), 
+                    int.Parse(tb_edad_san.Text), cb_especialidad_san.Text));
+
+                lstSanitarios.Items.Refresh();
+                cancelar_mod_anadir_san();
+                MessageBox.Show("El sanitario se ha añadido correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void btn_modificar_san_Click(object sender, RoutedEventArgs e)
         {
+            visibilidad_botones_sanitarios(false, false, false);
+            btn_cancelar_modificar_san.Visibility = Visibility.Visible;
+            btn_confirmar_modificar_san.Visibility = Visibility.Visible;
 
+            tb_nombre_san.Text = ((Sanitario)lstSanitarios.SelectedItem).Nombre;
+            tb_apellido_san.Text = ((Sanitario)lstSanitarios.SelectedItem).Apellidos;
+            tb_telefono_san.Text = ((Sanitario)lstSanitarios.SelectedItem).Telefono.ToString();
+            tb_edad_san.Text = ((Sanitario)lstSanitarios.SelectedItem).Edad.ToString();
+            cb_especialidad_san.Text = ((Sanitario)lstSanitarios.SelectedItem).Especialidad.ToString();
+
+            activar_textboxes();
+        }
+
+        private void btn_cancelar_modificar_san_Click(object sender, RoutedEventArgs e)
+        {
+            cancelar_mod_anadir_san();
+        }
+
+        private void btn_confirmar_modificar_san_Click(object sender, RoutedEventArgs e)
+        {
+            int[] comprobar = ComprobarCampos();
+            if (comprobar[0] == 0 && comprobar[1] == 0 && comprobar[2] == 0 && comprobar[3] == 0 && comprobar[4] == 0)
+            {
+                Sanitario sanitario = listaSanitarios.ElementAt(lstSanitarios.SelectedIndex);
+                sanitario.Nombre = tb_nombre_san.Text;
+                sanitario.Apellidos = tb_apellido_san.Text;
+                sanitario.Edad = int.Parse(tb_edad_san.Text);
+                sanitario.Telefono = int.Parse(tb_telefono_san.Text);
+                sanitario.Especialidad = cb_especialidad_san.Text;
+                lstSanitarios.Items.Refresh();
+                cancelar_mod_anadir_san();
+                MessageBox.Show("El paciente se ha modificado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void btn_eliminar_san_Click(object sender, RoutedEventArgs e)
@@ -125,22 +187,6 @@ namespace FisioLogicV2.Pages
             }
         }
 
-        private void lstSanitarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if(lstSanitarios.Items.Count > 0)
-            {
-                visibilidad_botones_sanitarios(false, true, true);
-            }
-        }
-
-        private void lstLimpiadores_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if(lstLimpiadores.Items.Count > 0)
-            {
-                visibilidad_botones_limpiadores(false, true, true);
-            }
-        }
-
         private void visibilidad_botones_sanitarios(Boolean anadir, Boolean modificar, Boolean eliminar)
         {
             btn_anadir_san.IsEnabled = anadir;
@@ -153,6 +199,116 @@ namespace FisioLogicV2.Pages
             btn_anadir_lim.IsEnabled = anadir;
             btn_modificar_lim.IsEnabled = modificar;
             btn_eliminar_lim.IsEnabled = eliminar;
+        }
+
+        private void cancelar_mod_anadir_san()
+        {
+            tb_nombre_san.Text = string.Empty;
+            tb_apellido_san.Text = string.Empty;
+            tb_edad_san.Text = string.Empty;
+            tb_telefono_san.Text = string.Empty;
+            btn_cancelar_anadir_san.Visibility = Visibility.Hidden;
+            btn_confirmar_anadir_san.Visibility = Visibility.Hidden;
+            visibilidad_botones_sanitarios(true, false, false);
+            desactivar_textboxes();
+        }
+
+        private void activar_textboxes()
+        {
+            tb_nombre_san.IsEnabled = true;
+            tb_apellido_san.IsEnabled = true;
+            tb_edad_san.IsEnabled = true;
+            tb_telefono_san.IsEnabled = true;
+            cb_especialidad_san.IsEnabled = true;
+        }
+
+        private void desactivar_textboxes()
+        {
+            tb_nombre_san.IsEnabled = false;
+            tb_apellido_san.IsEnabled = false;
+            tb_edad_san.IsEnabled = false;
+            tb_telefono_san.IsEnabled = false;
+            cb_especialidad_san.IsEnabled = false;
+        }
+
+        //Comprobaciones
+        private bool ContieneNumeros(string texto)
+        {
+            foreach (char caracter in texto)
+            {
+                if (char.IsDigit(caracter))
+                {
+                    return true; // Devuelve true si encuentra al menos un número
+                }
+            }
+            return false; // Devuelve false si no encuentra ningún número
+        }
+
+        private bool ContieneCaracteres(string texto)
+        {
+            foreach (char caracter in texto)
+            {
+                if (char.IsLetter(caracter))
+                {
+                    return true; // Devuelve true si encuentra al menos una letra
+                }
+            }
+            return false; // Devuelve false si no encuentra ninguna letra
+        }
+
+        private int[] ComprobarCampos()
+        {
+            int[] comprobacion = new int[4];
+
+            if (ContieneNumeros(tb_nombre_san.Text))
+            {
+                tb_nombre_san.BorderBrush = Brushes.Red;
+                tb_nombre_san.BorderThickness = new Thickness(1.5);
+                comprobacion[0] = -1;
+            }
+            else
+            {
+                tb_nombre_san.ClearValue(Border.BorderBrushProperty);
+                tb_nombre_san.ClearValue(Border.BorderThicknessProperty);
+            }
+
+            if (ContieneNumeros(tb_apellido_san.Text))
+            {
+                tb_apellido_san.BorderBrush = Brushes.Red;
+                tb_apellido_san.BorderThickness = new Thickness(1.5);
+                comprobacion[1] = -1;
+            }
+            else
+            {
+                tb_apellido_san.ClearValue(Border.BorderBrushProperty);
+                tb_apellido_san.ClearValue(Border.BorderThicknessProperty);
+            }
+
+            if (ContieneCaracteres(tb_telefono_san.Text) || tb_telefono_san.Text.Length != 9)
+            {
+                tb_telefono_san.BorderBrush = Brushes.Red;
+                tb_telefono_san.BorderThickness = new Thickness(1.5);
+                comprobacion[3] = -1;
+            }
+            else
+            {
+                tb_telefono_san.ClearValue(Border.BorderBrushProperty);
+                tb_telefono_san.ClearValue(Border.BorderThicknessProperty);
+            }
+
+            if (ContieneCaracteres(tb_edad_san.Text) || tb_edad_san.Text.Length < 1 || tb_edad_san.Text.Length > 2)
+            {
+                tb_edad_san.BorderBrush = Brushes.Red;
+                tb_edad_san.BorderThickness = new Thickness(1.5);
+                comprobacion[4] = -1;
+            }
+            else
+            {
+                tb_edad_san.ClearValue(Border.BorderBrushProperty);
+                tb_edad_san.ClearValue(Border.BorderThicknessProperty);
+            }
+
+            return comprobacion;
         }
     }
 }

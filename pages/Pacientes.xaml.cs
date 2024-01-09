@@ -82,77 +82,6 @@ namespace FisioLogicV2.Pages
             return listado;
         }
 
-        //Eliminar un paciente
-        private void btn_eliminar_pac_Click(object sender, RoutedEventArgs e)
-        {
-            List<Paciente> filasSeleccionadas = new List<Paciente>();
-            foreach (Paciente paciente in dgPacientes.SelectedItems)
-            {
-                filasSeleccionadas.Add(paciente);
-            }
-            if (MessageBox.Show("¿Esta convencido de eliminar el paciente seleccionado?", "Por favor, confirme para eliminar", MessageBoxButton.YesNo, MessageBoxImage.Warning).Equals(MessageBoxResult.Yes))
-            {
-                foreach (Paciente paciente in filasSeleccionadas)
-                {
-                    listaPacientes.Remove(paciente);
-                }
-            }
-            dgPacientes.Items.Refresh();
-            
-        }
-
-        //Modificar un paciente
-        private void btn_modificar_pac_Click(object sender, RoutedEventArgs e)
-        {
-            if(dgPacientes.SelectedItems.Count > 1)
-            {
-                MessageBox.Show("No se puede modificar más de un paciente simultáneamente.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }else
-            {
-                foreach(var column in dgPacientes.Columns)
-                {
-                    column.Visibility = Visibility.Hidden;
-                }
-
-                tb_nombre_pac.Visibility = Visibility.Visible;
-                tb_apellido_pac.Visibility = Visibility.Visible;
-                tb_direccion_pac.Visibility = Visibility.Visible;
-                tb_ciudad_pac.Visibility = Visibility.Visible;
-                tb_telefono_pac.Visibility = Visibility.Visible;
-                tb_edad_pac.Visibility = Visibility.Visible;
-                tb_email_pac.Visibility = Visibility.Visible;
-
-                tb_nombre_pac.Text = ((Paciente)dgPacientes.SelectedItem).Nombre;
-                tb_apellido_pac.Text = ((Paciente)dgPacientes.SelectedItem).Apellidos;
-                tb_direccion_pac.Text = ((Paciente)dgPacientes.SelectedItem).Direccion;
-                tb_ciudad_pac.Text = ((Paciente)dgPacientes.SelectedItem).Ciudad;
-                tb_telefono_pac.Text = ((Paciente)dgPacientes.SelectedItem).Telefono.ToString();
-                tb_edad_pac.Text = ((Paciente)dgPacientes.SelectedItem).Edad.ToString();
-                tb_email_pac.Text = ((Paciente)dgPacientes.SelectedItem).Email;
-
-                btn_cancelar_modificar_pac.Visibility = Visibility.Visible;
-                btn_confirmar_modificar_pac.Visibility=Visibility.Visible;
-                
-
-            }
-        }
-
-        //Añadir un paciente
-        private void btn_anadir_pac_Click(object sender, RoutedEventArgs e)
-        {
-            tb_nombre_pac.Visibility = Visibility.Visible;
-            tb_apellido_pac.Visibility = Visibility.Visible;
-            tb_direccion_pac.Visibility = Visibility.Visible;
-            tb_ciudad_pac.Visibility = Visibility.Visible;
-            tb_telefono_pac.Visibility = Visibility.Visible;
-            tb_edad_pac.Visibility = Visibility.Visible;
-            cb_genero_pac.Visibility = Visibility.Visible;
-            tb_email_pac.Visibility = Visibility.Visible;
-
-            btn_cancelar_anadir_pac.Visibility = Visibility.Visible;
-            btn_confirmar_anadir_pac.Visibility = Visibility.Visible;
-        }
-
         //Evento de cambio de indice del datagrid
         private void dgPacientes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -176,6 +105,28 @@ namespace FisioLogicV2.Pages
             }
         }
 
+        //Añadir un paciente
+        private void btn_anadir_pac_Click(object sender, RoutedEventArgs e)
+        {
+            tb_nombre_pac.Visibility = Visibility.Visible;
+            tb_apellido_pac.Visibility = Visibility.Visible;
+            tb_direccion_pac.Visibility = Visibility.Visible;
+            tb_ciudad_pac.Visibility = Visibility.Visible;
+            tb_telefono_pac.Visibility = Visibility.Visible;
+            tb_edad_pac.Visibility = Visibility.Visible;
+            cb_genero_pac.Visibility = Visibility.Visible;
+            tb_email_pac.Visibility = Visibility.Visible;
+
+            btn_cancelar_anadir_pac.Visibility = Visibility.Visible;
+            btn_confirmar_anadir_pac.Visibility = Visibility.Visible;
+        }
+
+        //Cancelar de añadir un nuevo paciente
+        private void btn_cancelar_anadir_pac_Click(object sender, RoutedEventArgs e)
+        {
+            cancelar_mod_anadir();
+        }
+
         //Confirmar de añadir un nuevo paciente
         private void btn_confirmar_anadir_pac_Click(object sender, RoutedEventArgs e)
         {
@@ -190,6 +141,49 @@ namespace FisioLogicV2.Pages
                 cancelar_mod_anadir();
                 MessageBox.Show("El paciente se ha añadido correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+        }
+
+        //Modificar un paciente
+        private void btn_modificar_pac_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgPacientes.SelectedItems.Count > 1)
+            {
+                MessageBox.Show("No se puede modificar más de un paciente simultáneamente.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                foreach (var column in dgPacientes.Columns)
+                {
+                    column.Visibility = Visibility.Hidden;
+                }
+
+                tb_nombre_pac.Visibility = Visibility.Visible;
+                tb_apellido_pac.Visibility = Visibility.Visible;
+                tb_direccion_pac.Visibility = Visibility.Visible;
+                tb_ciudad_pac.Visibility = Visibility.Visible;
+                tb_telefono_pac.Visibility = Visibility.Visible;
+                tb_edad_pac.Visibility = Visibility.Visible;
+                tb_email_pac.Visibility = Visibility.Visible;
+
+                tb_nombre_pac.Text = ((Paciente)dgPacientes.SelectedItem).Nombre;
+                tb_apellido_pac.Text = ((Paciente)dgPacientes.SelectedItem).Apellidos;
+                tb_direccion_pac.Text = ((Paciente)dgPacientes.SelectedItem).Direccion;
+                tb_ciudad_pac.Text = ((Paciente)dgPacientes.SelectedItem).Ciudad;
+                tb_telefono_pac.Text = ((Paciente)dgPacientes.SelectedItem).Telefono.ToString();
+                tb_edad_pac.Text = ((Paciente)dgPacientes.SelectedItem).Edad.ToString();
+                tb_email_pac.Text = ((Paciente)dgPacientes.SelectedItem).Email;
+
+                btn_cancelar_modificar_pac.Visibility = Visibility.Visible;
+                btn_confirmar_modificar_pac.Visibility = Visibility.Visible;
+
+
+            }
+        }
+
+        //Cancelar modificar un paciente
+        private void btn_cancelar_modificar_pac_Click(object sender, RoutedEventArgs e)
+        {
+            cancelar_mod_anadir();
         }
 
         //Confirmar modificar un paciente
@@ -213,16 +207,24 @@ namespace FisioLogicV2.Pages
             }
         }
 
-        //Cancelar de añadir un nuevo paciente
-        private void btn_cancelar_anadir_pac_Click(object sender, RoutedEventArgs e)
-        {
-            cancelar_mod_anadir();
-        }
 
-        //Cancelar modificar un paciente
-        private void btn_cancelar_modificar_pac_Click(object sender, RoutedEventArgs e)
+        //Eliminar un paciente
+        private void btn_eliminar_pac_Click(object sender, RoutedEventArgs e)
         {
-            cancelar_mod_anadir();
+            List<Paciente> filasSeleccionadas = new List<Paciente>();
+            foreach (Paciente paciente in dgPacientes.SelectedItems)
+            {
+                filasSeleccionadas.Add(paciente);
+            }
+            if (MessageBox.Show("¿Esta convencido de eliminar el paciente seleccionado?", "Por favor, confirme para eliminar", MessageBoxButton.YesNo, MessageBoxImage.Warning).Equals(MessageBoxResult.Yes))
+            {
+                foreach (Paciente paciente in filasSeleccionadas)
+                {
+                    listaPacientes.Remove(paciente);
+                }
+            }
+            dgPacientes.Items.Refresh();
+            
         }
 
         //Lo que hacen los dos botones de cancelar

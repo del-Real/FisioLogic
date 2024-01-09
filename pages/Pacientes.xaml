@@ -70,7 +70,6 @@
                     <ComboBox.Items>
                         <ComboBoxItem>Masculino</ComboBoxItem>
                         <ComboBoxItem>Femenino</ComboBoxItem>
-                        <!-- Puedes agregar más elementos ComboBoxItem si lo necesitas -->
                     </ComboBox.Items>
                 </ComboBox>
                 <TextBox x:Name="tb_email_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="7" Visibility="Hidden" Height="23"/>
