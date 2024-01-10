@@ -89,7 +89,7 @@ namespace FisioLogicV2.Pages
         {
             if (lstSanitarios.Items.Count > 0)
             {
-                visibilidad_botones_sanitarios(false, true, true);
+                visibilidad_botones_sanitarios(true, true, true);
                 btn_ficha_san.IsEnabled = true;
             }
         }
@@ -234,7 +234,7 @@ namespace FisioLogicV2.Pages
         {
             if (lstLimpiadores.Items.Count > 0)
             {
-                visibilidad_botones_limpiadores(false, true, true);
+                visibilidad_botones_limpiadores(true, true, true);
                 btn_ficha_lim.IsEnabled = true;
             }
         }

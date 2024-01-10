@@ -39,10 +39,11 @@ namespace FisioLogicV2.Pages
             
         }
         
+        //Cargar los datos de los pacientes
         private List<Paciente> CargarContenidoXML()  //Nos seguia sin funcionar el metodo de cargar los datos del XML, como
         {                         //viste en la segunda defensa de la practica hemos optado por cargar asi algunos datos 
             List<Paciente> listado = new List<Paciente>();
-            string rutaFoto0 = "FisioLogic\\fotosPacientes\\pedrogarcia.jpg";
+            string rutaFoto0 = "Assets\\fotosPacientes\\pedrogarcia.jpg";
             string rutaFoto1 = "FisioLogic\\fotosPacientes\\mariamartinez.jpg";
             string rutaFoto2 = "FisioLogic\\fotosPacientes\\juanlopez.jpg";
             string rutaFoto3 = "FisioLogic\\fotosPacientes\\laurarodriguez.jpg";
@@ -227,7 +228,7 @@ namespace FisioLogicV2.Pages
             
         }
 
-        //Lo que hacen los dos botones de cancelar
+        //Lo que hacen los dos botones de cancelar (tanto en añadir como en modificar)
         private void cancelar_mod_anadir()
         {
             tb_nombre_pac.Text = string.Empty;

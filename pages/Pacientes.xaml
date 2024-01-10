@@ -44,22 +44,22 @@
                     <ColumnDefinition Width="120*"/>
                     <ColumnDefinition Width="85*"/>
                 </Grid.ColumnDefinitions>
-                <Label Content="Nombre" Grid.Row="1" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
-                <Label Content="Apellidos" Grid.Row="2" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
-                <Label Content="Direccion" Grid.Row="3" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
-                <Label Content="Ciudad" Grid.Row="4" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
-                <Label Content="Telefono" Grid.Row="5" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
-                <Label Content="Edad" Grid.Row="6" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
-                <Label Content="Email" Grid.Row="7" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
-                <Label Content="Genero" Grid.Row="8" Grid.Column="0" FontWeight="Bold" FontSize="16" Margin="-1,5,5,5" VerticalAlignment="Center"/>
-                <TextBlock x:Name="nombre_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Nombre}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
-                <TextBlock x:Name="apellidos_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Apellidos}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
-                <TextBlock x:Name="direccion_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Direccion}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
-                <TextBlock x:Name="ciudad_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Ciudad}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
-                <TextBlock x:Name="telefono_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Telefono}" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
-                <TextBlock x:Name="edad_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Edad}" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
-                <TextBlock x:Name="genero_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Genero}" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
-                <TextBlock x:Name="email_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Email}" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" FontSize="13"/>
+                <Label Content="Nombre" Grid.Row="1" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                <Label Content="Apellidos" Grid.Row="2" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                <Label Content="Direccion" Grid.Row="3" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                <Label Content="Ciudad" Grid.Row="4" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                <Label Content="Telefono" Grid.Row="5" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                <Label Content="Edad" Grid.Row="6" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                <Label Content="Email" Grid.Row="7" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                <Label Content="Genero" Grid.Row="8" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                <TextBlock x:Name="nombre_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Nombre}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="apellidos_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Apellidos}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="direccion_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Direccion}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="ciudad_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Ciudad}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="telefono_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Telefono}" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="edad_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Edad}" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="genero_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Genero}" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="email_pac" TextWrapping="Wrap" Text="{Binding ElementName=dgPacientes, Path=SelectedItem.Email}" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" FontSize="14"/>
                 <TextBox x:Name="tb_nombre_pac" TextWrapping="Wrap" Grid.Column="1"  Grid.Row="1" Visibility="Hidden" Height="23"/>
                 <TextBox x:Name="tb_apellido_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2" Visibility="Hidden" Height="23"/>
                 <TextBox x:Name="tb_direccion_pac" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3" Visibility="Hidden" Height="23"/>
