@@ -79,7 +79,7 @@
             </Button>
             <Button x:Name="btn_eliminar_san" Width="128" Margin="0,-39,1,1" ToolTip="Eliminar un sanitario" HorizontalAlignment="Right" Height="37" VerticalAlignment="Center" IsEnabled="False" Click="btn_eliminar_san_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="/Assets/edit.png" Width="16" Height="16" Margin="0,0,5,0"/>
+                    <Image Source="/Assets/removeButton.png" Width="16" Height="16" Margin="0,0,5,0"/>
                     <TextBlock Text="Eliminar" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
@@ -194,7 +194,7 @@
             </Button>
             <Button x:Name="btn_eliminar_lim" Width="128" Margin="0,-39,1,1" ToolTip="Eliminar un limpiador" HorizontalAlignment="Right" Height="37" VerticalAlignment="Center" IsEnabled="False" Click="btn_eliminar_lim_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="/Assets/edit.png" Width="16" Height="16" Margin="0,0,5,0"/>
+                    <Image Source="/Assets/removeButton.png" Width="16" Height="16" Margin="0,0,5,0"/>
                     <TextBlock Text="Eliminar" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>

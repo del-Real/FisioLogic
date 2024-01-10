@@ -12,12 +12,26 @@
     <None Remove="Assets\addButton.png" />
     <None Remove="Assets\agregar.png" />
     <None Remove="Assets\backArrow.png" />
+    <None Remove="Assets\cancel.png" />
+    <None Remove="Assets\confirm.png" />
     <None Remove="Assets\edit.png" />
     <None Remove="Assets\editar.png" />
     <None Remove="Assets\eliminar.png" />
     <None Remove="Assets\Femenino.PNG" />
     <None Remove="Assets\FisioLogic_positive_OG.png" />
     <None Remove="Assets\FisioLogic_symbol.png" />
+    <None Remove="Assets\fotosPacientes\anagonzalez.jpg" />
+    <None Remove="Assets\fotosPacientes\carlosperez.jpg" />
+    <None Remove="Assets\fotosPacientes\diegoalvarez.jpg" />
+    <None Remove="Assets\fotosPacientes\elenarodriguez.jpg" />
+    <None Remove="Assets\fotosPacientes\javiermartinez.jpg" />
+    <None Remove="Assets\fotosPacientes\juanlopez.jpg" />
+    <None Remove="Assets\fotosPacientes\laurarodriguez.jpg" />
+    <None Remove="Assets\fotosPacientes\luciagarcia.jpg" />
+    <None Remove="Assets\fotosPacientes\luisfernandez.jpg" />
+    <None Remove="Assets\fotosPacientes\mariamartinez.jpg" />
+    <None Remove="Assets\fotosPacientes\pedrogarcia.jpg" />
+    <None Remove="Assets\fotosPacientes\sofiasanchez.jpg" />
     <None Remove="Assets\help.png" />
     <None Remove="Assets\Masculino.PNG" />
     <None Remove="Assets\mostrarPass.png" />
@@ -35,6 +49,12 @@
     <Resource Include="Assets\backArrow.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\cancel.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\confirm.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\edit.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -45,6 +65,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\FisioLogic_symbol.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\anagonzalez.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\carlosperez.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\diegoalvarez.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\elenarodriguez.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\javiermartinez.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\juanlopez.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\laurarodriguez.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\luciagarcia.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\luisfernandez.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\mariamartinez.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\pedrogarcia.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fotosPacientes\sofiasanchez.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\help.png">

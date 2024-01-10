@@ -90,10 +90,7 @@
                 </StackPanel>
             </Button>
             <Button x:Name="btn_eliminar_pac" Width="128" Margin="0,-40,1,1" ToolTip="Eliminar un paciente" HorizontalAlignment="Right" Height="37" IsEnabled="False" Click="btn_eliminar_pac_Click">
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Assets//removeButton.png" Width="16" Height="16" Margin="0,0,5,0"/>
-                    <TextBlock Text="Eliminar" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
-                </StackPanel>
+                <TextBlock Text="Eliminar" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" Width="63"/>
             </Button>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Margin="910,680,0,150" Width="300">
@@ -125,5 +122,6 @@
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Margin="16,20,16,800">
             <Label Content="Pacientes" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#2d2d2d" Foreground="#fff" Height="45" Width="1200" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center"/>
         </Border>
+        <Image Source="/Assets/removeButton.png" Margin="566,809,648,29"/>
     </Grid>
 </Page>
