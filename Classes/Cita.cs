@@ -12,6 +12,7 @@ public class Cita
     public string Hora { set; get; }
     public int Mes { set; get; }
     public int Year { set; get; }
+    public string fecha { set; get; }
     public string Paciente { set; get; }
     public string Profesional { set; get; }
     public int Duracion { set; get; }
@@ -23,6 +24,7 @@ public class Cita
         Dia = dia;
         Mes = mes;
         Year = year;
+        fecha = dia + "/" + mes + "/" + year;
         Hora = hora;
         Paciente = paciente;
         Profesional = profesional;

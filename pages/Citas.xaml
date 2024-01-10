@@ -15,9 +15,7 @@
         <DataGrid x:Name="dgCitas" Margin="40,100,562,92" AlternatingRowBackground="#d6f9f6" AutoGenerateColumns="False" SelectionChanged="dgCitas_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding IdCita}" Width="30" />
-                <DataGridTextColumn Header="Día" Binding="{Binding Dia}" Width="30" />
-                <DataGridTextColumn Header="Mes" Binding="{Binding Mes}" Width="35" />
-                <DataGridTextColumn Header="Año" Binding="{Binding Year}" Width="40" />
+                <DataGridTextColumn Header="Fecha" Binding="{Binding fecha}" Width="65" />
                 <DataGridTextColumn Header="Hora" Binding="{Binding Hora}" Width="40" />
                 <DataGridTextColumn Header="Paciente" Binding="{Binding Paciente}" Width="160"/>
                 <DataGridTextColumn Header="Especialista" Binding="{Binding Profesional}" Width="110"/>
