@@ -79,5 +79,6 @@ Background="White" Opacity="0.6" />
         <Image Margin="269,39,125,158" Source="/Assets/help.png" Opacity="0.5" Grid.Column="5" Grid.RowSpan="2"/>
         <Image Grid.Column="2" Margin="23,18,30,10" Source="/Assets/FisioLogic_positive_OG.png" Grid.ColumnSpan="2" Grid.Row="1"/>
         <Label x:Name="lbShowPass" Grid.Column="4" Content="" HorizontalAlignment="Left" Margin="106,77,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="430" Height="26"/>
+        <Label Content="Usuario: admin&#xA;Contraseña: admin" HorizontalAlignment="Left" Margin="23,75,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="131" FontFamily="Leelawadee" FontSize="14" Grid.RowSpan="2" Grid.Column="3"/>
     </Grid>
 </Window>
