@@ -15,7 +15,7 @@
 
         <Image Source="/Assets/w_user.png" Margin="280,204,734,412"/>
         <Border BorderBrush="#32e2d0" BorderThickness="10" CornerRadius="8" Margin="564,238,378,559"/>
-        <Label Content="Lucía Ramirez" HorizontalAlignment="Left" Margin="572,244,0,0" VerticalAlignment="Top" Background="#32e2d0" Foreground="#2d2d2d" Height="30" Width="292" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label DataContext="{Binding sanitario}" Content="{Binding Path=Nombre}" HorizontalAlignment="Left" Margin="572,244,0,0" VerticalAlignment="Top" Background="#32e2d0" Foreground="#2d2d2d" Height="30" Width="292" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label Content="28 años" HorizontalAlignment="Left" Margin="572,270,0,0" VerticalAlignment="Top" Background="#32e2d0" Foreground="#fff" Height="30" Width="292" FontSize="15" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Border BorderBrush="#a2a4e2" BorderThickness="10" CornerRadius="8" Margin="577,368,482,457"/>
         <Label Content="Traumatología" HorizontalAlignment="Left" Margin="581,374,0,0" VerticalAlignment="Top" Background="#a2a4e2" Foreground="#2d2d2d" Height="30" Width="184" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>

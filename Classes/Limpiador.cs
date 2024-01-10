@@ -14,4 +14,10 @@ public class Limpiador : Profesional
     {
         AreaAsignada = areaAsignada;
     }
+
+    public Limpiador(int id, string nombre, string apellidos, int edad, int telefono, string areaAsignada)
+        :base(id, nombre, apellidos, edad, telefono)
+    {
+        AreaAsignada = areaAsignada;
+    }
 }

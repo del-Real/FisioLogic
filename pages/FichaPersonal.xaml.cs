@@ -21,7 +21,7 @@ namespace FisioLogicV2.pages
     /// </summary>
     public partial class FichaPersonal : Page
     {
-        public FichaPersonal()
+        public FichaPersonal(Sanitario sanitario)
         {
             InitializeComponent();
         }
