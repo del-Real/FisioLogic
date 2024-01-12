@@ -179,8 +179,11 @@ namespace FisioLogicV2.Pages
         //Boton ficha de sanitario
         private void btn_ficha_san_Click(object sender, RoutedEventArgs e)
         {
-            Sanitario sanitario = listaSanitarios.ElementAt(lstSanitarios.SelectedIndex);
-            ficha = new FichaPersonal(sanitario);
+            //Sanitario sanitario = listaSanitarios.ElementAt(lstSanitarios.SelectedIndex);
+            //ficha = new FichaPersonal(sanitario);
+
+            VentanaPersonal winPersonal = new VentanaPersonal();
+            winPersonal.Show();
 
         }
 
@@ -324,8 +327,11 @@ namespace FisioLogicV2.Pages
         //Boton ficha de limpiador
         private void btn_ficha_lim_Click(object sender, RoutedEventArgs e)
         {
-            Limpiador limpiador = listaLimpiadores.ElementAt(lstLimpiadores.SelectedIndex);
+            //Limpiador limpiador = listaLimpiadores.ElementAt(lstLimpiadores.SelectedIndex);
             //ficha = new FichaPersonal(limpiador);
+
+            VentanaPersonal winPersonal = new VentanaPersonal();
+            winPersonal.Show();
         }
 
         //Metodo para modificar visibilidad botones de limpiadores (añadir, modificar y eliminar)

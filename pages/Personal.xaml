@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:FisioLogicV2.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="865" d:DesignWidth="1250"
-      Title="Personal" Background="White">
+      Title="Personal" Background="#32e2d0">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -36,6 +36,7 @@
             <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
         <!-- S A N I T A R I O S -->
+        <Border BorderBrush="#fff" Background="#fff" BorderThickness="15" CornerRadius="10" Grid.ColumnSpan="11" Grid.RowSpan="11"/>
         <Border BorderBrush="#2d2d2d" BorderThickness="10" CornerRadius="8" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="9"/>
         <Label Content="Sanitario" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#2d2d2d" Foreground="#fff" FontSize="18" FontWeight="Bold" FontFamily="Leelawadee UI" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="9" Width="1150" Height="50"/>
         <ListBox x:Name="lstSanitarios" SelectedIndex="-1" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="3" Margin="8,20,8,20"
@@ -61,9 +62,7 @@
                 </Style>
             </ListBox.ItemContainerStyle>
         </ListBox>
-        <Button x:Name="btn_ficha_san" Grid.Row="4" Grid.Column="5" Margin="50,50,8,20" IsEnabled="False" Click="btn_ficha_san_Click">
-            <Image Source="/Assets/mostrarPass.png"/>
-        </Button>
+        <Button x:Name="btn_ficha_san" Content="Ver Ficha" Grid.Row="4" Grid.Column="5" Margin="40,50,8,20" IsEnabled="False" Click="btn_ficha_san_Click"/>
         <StackPanel HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5" Margin="0,-10,0,10" Width="480">
             <Button x:Name="btn_anadir_san" Width="128" ToolTip="Añadir un sanitario" HorizontalAlignment="Left" Height="37" VerticalAlignment="Center" Click="btn_anadir_san_Click">
                 <StackPanel Orientation="Horizontal">
@@ -176,9 +175,7 @@
                 </Style>
             </ListBox.ItemContainerStyle>
         </ListBox>
-        <Button x:Name="btn_ficha_lim" Grid.Row="9" Grid.Column="5" Margin="50,30,8,40" IsEnabled="False" Click="btn_ficha_lim_Click">
-            <Image Source="/Assets/mostrarPass.png"/>
-        </Button>
+        <Button x:Name="btn_ficha_lim" Content="Ver Ficha" Grid.Row="9" Grid.Column="5" Margin="40,30,8,40" IsEnabled="False" Click="btn_ficha_lim_Click"/>
         <StackPanel HorizontalAlignment="Center" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="5" Margin="0,-30,0,30" Width="480">
             <Button x:Name="btn_anadir_lim" Width="128" ToolTip="Añadir un limpiador" HorizontalAlignment="Left" Height="37" VerticalAlignment="Center" Click="btn_anadir_lim_Click">
                 <StackPanel Orientation="Horizontal">
